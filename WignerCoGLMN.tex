@@ -48,7 +48,7 @@ Wigner Coefficients are ...
 \section{Introduction}
 In the previous publications \cite{GIW2,GIW3} the matrix elements of unitary representations of $gl(m|n)$ were given expicitly. The resulting closed-form expressions were obtained by utilizing the factorization of a matrix element into a Wigner coefficient and a reduced matrix element. The vector Wigner coefficients thus obtained allow us in this paper to obtain all fundamental $gl(m|n)$ Wigner caeficients (WCs) in the Gelfand-Tsetlin (GT) basis for both type 1 and type 2 unitary representations.
  
-In this paper we give a summary of the background regarding the characteristic identites and their associated invariants in Section \ref{prelim}. We then continue by introducing the Wigner coefficients in Section \ref{Wigner} and give thier expressions in terms of representation labels of the representation concerned. Finally, Section \ref{resultsum} concludes with a discussion of these results.  
+A summary of the background regarding the characteristic identites and their associated invariants in Section \ref{prelim}. We then continue by introducing the Wigner coefficients in Section \ref{Wigner} and give thier expressions in terms of representation labels of the representation concerned. Finally, Section \ref{resultsum} concludes with a discussion of these results.  
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -56,7 +56,36 @@ In this paper we give a summary of the background regarding the characteristic i
 \section{Characteristic identities and associated invariants}
 \label{prelim}
 
-We utilise the notation used in the series \cite{GIW1,GIW2,GIW3}.
+We utilise the notation used in the series \cite{GIW1,GIW2,GIW3}. The generators of the Lie superalgebra $gl(m|n)$ are denoted $E_{ij}$ where $1 \leq p,q \leq m+n$. The values $1 \leq i,j \leq m$ are called \textit{even} while the values $m < i,j \leq m+n$ are called \textit{odd}.
+
+The graded index notation will be used where the Latin indices $i,j,...$ are used for even quantities and the Greek indices $\mu, \nu, ...$ for odd quantities. The grading operator $(~)$ will then give
+$$
+(i) = 0,~(\mu) = 1
+$$
+and then set of generators is then given by 
+$$
+E_{ij}, E_{i\mu}, E_{\mu i}, E_{\mu\nu}.
+$$
+We reserve the indices $p,q$ to be ungraded and to range fully from $1$ to $m+n$.
+
+The tensor operator $\bar{\mathcal{A}}$ constructed in \cite{GIW1} plays an important role in what follows and is defined as the $m+n$ square matix with entries
+$$
+\bar{\mathcal{A}}_{pq} = -(-1)^{(p)(q)} E_{qp}.
+$$
+When $\bar{\mathcal{A}}$ acts on an irreducible $gl(m|n)$ module $V(\Lambda)$ of highest weight $\Lambda$ it will satisfy the characteristic identity
+\begin{align}
+\prod_{i=1}^m ({\cal \bar{A}} - \bar{\alpha}_i) \prod^n_{\mu = 1} ({\cal \bar{A}} - \bar{\alpha}_\mu) = 0
+\label{CharIdent1}
+\end{align}
+where the adjoint roots $\bar{\alpha}_i, \bar{\alpha}_\mu$ are given in terms of the highest weight labels
+$$
+\Lambda = (\Lambda_{i=1},...,\Lambda_{i=m}|\Lambda_{\mu=1},...\Lambda_{\mu=n})
+$$
+as
+$$
+{\bar{\alpha}}_i= i - 1 -\Lambda_i ,~~ {\bar{\alpha}}_\mu = \Lambda_\mu + m + 1 - \mu. 
+$$
+
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
