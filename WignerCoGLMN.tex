@@ -46,9 +46,9 @@ Wigner Coefficients are ...
 % \end{tableofcontents}
 
 \section{Introduction}
-In the previous publications \cite{GIW2,GIW3} the matrix elements of unitary representations of $gl(m|n)$ were given expicitly. The resulting closed-form expressions were obtained by utilizing the factorization of a matrix element into a Wigner coefficient and a reduced matrix element. The vector Wigner coefficients thus obtained allow us in this paper to obtain all fundamental $gl(m|n)$ Wigner caeficients (WCs) in the Gelfand-Tsetlin (GT) basis for both type 1 and type 2 unitary representations.
+In the previous publications \cite{GIW2,GIW3} the matrix elements of unitary representations of $gl(m|n)$ were given explicitly. The resulting closed-form expressions were obtained by utilizing the factorization of a matrix element into a Wigner coefficient and a reduced matrix element. The vector Wigner coefficients thus obtained allow us in this paper to obtain all fundamental $gl(m|n)$ Wigner coefficients (WCs) in the Gelfand-Tsetlin (GT) basis for both type 1 and type 2 unitary representations.
  
-A summary of the background regarding the characteristic identites and their associated invariants in Section \ref{prelim}. We then continue by introducing the Wigner coefficients in Section \ref{Wigner} and give thier expressions in terms of representation labels of the representation concerned. Finally, Section \ref{resultsum} concludes with a discussion of these results.  
+A summary of the background regarding the characteristic identities and their associated invariants in Section \ref{prelim}. We then continue by introducing the Wigner coefficients in Section \ref{Wigner} and give their expressions in terms of representation labels of the representation concerned. Finally, Section \ref{resultsum} concludes with a discussion of these results.  
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -68,7 +68,7 @@ E_{ij}, E_{i\mu}, E_{\mu i}, E_{\mu\nu}.
 $$
 We reserve the indices $p,q$ to be ungraded and to range fully from $1$ to $m+n$.
 
-The tensor operator $\bar{\mathcal{A}}$ constructed in \cite{GIW1} plays an important role in what follows and is defined as the $m+n$ square matix with entries
+The tensor operator $\bar{\mathcal{A}}$ constructed in \cite{GIW1} plays an important role in what follows and is defined as the $m+n$ square matrix with entries
 $$
 \bar{\mathcal{A}}_{pq} = -(-1)^{(p)(q)} E_{qp}.
 $$
@@ -85,7 +85,58 @@ as
 $$
 {\bar{\alpha}}_i= i - 1 -\Lambda_i ,~~ {\bar{\alpha}}_\mu = \Lambda_\mu + m + 1 - \mu. 
 $$
+Immediately from the characteristic identity, we see that for each integer $r$ where $1 \leq  r \leq m+n$ there exists a projection operator 
+$$
+\bar{P}[r]: V(\varepsilon_1) \otimes V(\Lambda) \longrightarrow V(\Lambda + \epsilon_r)
+$$
+given by
+\begin{align*}
+\bar{P}[r] = \prod^{m+n}_{k \neq r} \left( \frac{{\cal \bar{A}} - \bar{\alpha}_k}{\bar{\alpha}_r
+- \bar{\alpha}_k} \right)\nn.
+\end{align*}
+We will now show that the eigenvalues of the invariant
+\begin{equation*}
+\bar{c}_r = \bar{Q}[r]_{m+n}^{\ m+n}
+\end{equation*}
+are essentially squares of reduced Wigner coefficients.
 
+Letting $e_i$ denote the Gelfand-Tsetlin (GT) basis states for the vector module $V(\varepsilon_1)$ and ${e^\Lambda_\beta}$ denote the (GT) basis states for the irreducible module $V(\Lambda)$ of highest weight $\Lambda$. Then the matrix elements of $\bar{P}[r]$ can be given in the form
+\begin{align*}
+\left\langle e^\Lambda_\beta | \bar{P}[r]^j_i | e^{\Lambda}_\alpha \right\rangle =
+\sum_\gamma \left\langle e^\Lambda_\beta \otimes e_i | e^{\Lambda + \varepsilon_r}_\gamma \right\rangle
+\left\langle e^{\Lambda+\varepsilon_r}_\gamma | e_j \otimes e^\Lambda_\alpha \right\rangle
+\end{align*}
+where
+$$
+\left\langle e^{\Lambda+\varepsilon_r}_\gamma | e_j \otimes e^\Lambda_\alpha \right\rangle
+$$
+are the vector (fundamental) Wigner coefficients.
+
+Setting $i=j=m+n$ gives
+\begin{align}
+\left\langle\left. \left(\begin{array}{c} \Lambda\\ [\Lambda'_0] \end{array}\right) \right|\right.
+\bar{c}_r \left.\left| \left(\begin{array}{c} \Lambda\\
+[\Lambda_0] \end{array}\right)
+\right. \right\rangle
+=\delta_{[\Lambda'_0][\Lambda]}
+\left| \left\langle\left. 
+\begin{array}{c} \Lambda+\varepsilon_r\\ [\Lambda_0] \end{array}
+\right|\right.
+\left.
+e_{m+n}\otimes \begin{array}{c} \tilde{\Lambda}\\
+[\Lambda_0] \end{array}
+\right\rangle \nn \right|^2,
+
+\begin{align}
+\delta_{[\Lambda'_0][\Lambda]}
+\left| \left\langle\left. 
+\begin{array}{c} \Lambda+\varepsilon_r\\ [\Lambda_0] \end{array}
+\right|\right.
+\left.
+e_{m+n}\otimes \begin{array}{c} \tilde{\Lambda}\\
+[\Lambda_0] \end{array}
+\right\rangle \nn \right|^2,
+\end{align}
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
