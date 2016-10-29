@@ -35,7 +35,9 @@ School of Mathematics and Physics, The University of Queensland, St Lucia QLD 40
 \end{center}
 
 \begin{abstract}
-Wigner Coefficients are ...
+In this paper all fundamental Wigner coefficients are determined
+algebraically by the eigenvalues of certain generalized Casimir invariants. Here the
+method is applied in the context of both type 1 and type 2 unitary representations of the Lie superalgebra $gl(m|n)$.
 \end{abstract}
 
 % \begin{flushright}
@@ -68,7 +70,7 @@ E_{ij}, E_{i\mu}, E_{\mu i}, E_{\mu\nu}.
 $$
 We reserve the indices $p,q$ to be ungraded and to range fully from $1$ to $m+n$.
 
-The tensor operator $\bar{\mathcal{A}}$ constructed in \cite{GIW1} plays an important role in what follows and is defined as the $m+n$ square matrix with entries
+The adjoint tensor operator $\bar{\mathcal{A}}$ constructed in \cite{GIW1} plays an important role in what follows and is defined as the $m+n$ square matrix with entries
 $$
 \bar{\mathcal{A}}_{pq} = -(-1)^{(p)(q)} E_{qp}.
 $$
@@ -94,13 +96,40 @@ given by
 \bar{P}[r] = \prod^{m+n}_{k \neq r} \left( \frac{{\cal \bar{A}} - \bar{\alpha}_k}{\bar{\alpha}_r
 - \bar{\alpha}_k} \right)\nn.
 \end{align*}
-We will now show that the eigenvalues of the invariant
-\begin{equation*}
-\bar{c}_r = \bar{Q}[r]_{m+n}^{\ m+n}
-\end{equation*}
+Similarly we have the vector matrix $\mathcal{A}$ with entries
+$$
+\mathcal{A}_{pq} = -(-1)^{(p)} E_{pq}.
+$$
+that satisify the polynomial identities
+\begin{align}
+\prod_{i=1}^m ({\cal A} - \alpha_i) \prod^n_{\mu = 1} ({\cal A} - \alpha_\mu) = 0
+\label{CharIdent2}
+\end{align}
+where
+$$
+{\alpha}_i= \Lambda_i + m - n - i ,~~ {\alpha}_\mu = \mu - \Lambda_\mu -n. 
+$$
+The associated projection operator 
+$$
+P[r]: V^*(\varepsilon_1) \otimes V(\Lambda) \longrightarrow V(\Lambda - \epsilon_r)
+$$
+is then given by
+\begin{align*}
+P[r] = \prod^{m+n}_{k \neq r} \left( \frac{{\cal A} - \alpha_k}{\alpha_r
+- \alpha_k} \right)\nn.
+\end{align*}
+
+We will now show that the eigenvalues of the invariants 
+\begin{align*}
+\bar{c}_r = \bar{P}[r]_{m+n}^{\ m+n}
+\end{align*}
+and 
+\begin{align*}
+c_r = P[r]_{\ m+n}^{m+n}
+\end{align*}
 are essentially squares of reduced Wigner coefficients.
 
-Letting $e_i$ denote the Gelfand-Tsetlin (GT) basis states for the vector module $V(\varepsilon_1)$ and ${e^\Lambda_\beta}$ denote the (GT) basis states for the irreducible module $V(\Lambda)$ of highest weight $\Lambda$. Then the matrix elements of $\bar{P}[r]$ can be given in the form
+Let $e_i$ denote the Gelfand-Tsetlin (GT) basis states for the vector module $V(\varepsilon_1)$ and ${e^\Lambda_\beta}$ denote the (GT) basis states for the irreducible module $V(\Lambda)$ of highest weight $\Lambda$. Then the matrix elements of $\bar{P}[r]$ can be given in the form
 \begin{align*}
 \left\langle e^\Lambda_\beta | \bar{P}[r]^j_i | e^{\Lambda}_\alpha \right\rangle =
 \sum_\gamma \left\langle e^\Lambda_\beta \otimes e_i | e^{\Lambda + \varepsilon_r}_\gamma \right\rangle
@@ -114,40 +143,125 @@ are the vector (fundamental) Wigner coefficients.
 
 Setting $i=j=m+n$ gives
 \begin{align}
-\left\langle\left. \left(\begin{array}{c} \Lambda\\ [\Lambda'_0] \end{array}\right) \right|\right.
+\left\langle\left. \left(\begin{array}{c} \Lambda\\ {[\Lambda'_0]} \end{array}\right) \right|\right.
 \bar{c}_r \left.\left| \left(\begin{array}{c} \Lambda\\
-[\Lambda_0] \end{array}\right)
-\right. \right\rangle
-=\delta_{[\Lambda'_0][\Lambda]}
+{[\Lambda_0]} \end{array}\right)
+\right. \right\rangle = \delta_{[\Lambda'_0][\Lambda]}
 \left| \left\langle\left. 
-\begin{array}{c} \Lambda+\varepsilon_r\\ [\Lambda_0] \end{array}
+\begin{array}{c} \Lambda+\varepsilon_r\\ {[\Lambda_0]} \end{array}
 \right|\right.
 \left.
-e_{m+n}\otimes \begin{array}{c} \tilde{\Lambda}\\
-[\Lambda_0] \end{array}
-\right\rangle \nn \right|^2,
-
-\begin{align}
-\delta_{[\Lambda'_0][\Lambda]}
-\left| \left\langle\left. 
-\begin{array}{c} \Lambda+\varepsilon_r\\ [\Lambda_0] \end{array}
-\right|\right.
-\left.
-e_{m+n}\otimes \begin{array}{c} \tilde{\Lambda}\\
-[\Lambda_0] \end{array}
+e_{m+n}\otimes \begin{array}{c} \Lambda \\
+{[\Lambda_0]} \end{array}
 \right\rangle \nn \right|^2,
 \end{align}
-
+while from the analogeous argument for the projections $P[r]$ we have
+\begin{align}
+\left\langle\left. \left(\begin{array}{c} \Lambda\\ {[\Lambda'_0]} \end{array}\right) \right|\right.
+c_r \left.\left| \left(\begin{array}{c} \Lambda\\
+{[\Lambda_0]} \end{array}\right)
+\right. \right\rangle = \delta_{[\Lambda'_0][\Lambda]}
+\left| \left\langle\left. 
+\begin{array}{c} \Lambda-\varepsilon_r\\ {[\Lambda_0]} \end{array}
+\right|\right.
+\left.
+\bar{e}_{m+n}\otimes \begin{array}{c} \Lambda \\
+{[\Lambda_0]} \end{array}
+\right\rangle \nn \right|^2,
+\end{align}
+where $\bar{e}_r$ denote the Gelfand-Tsetlin (GT) basis states of the adjoint vector module.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% gl(m|n+1) level %%%%%%%%%%%%%%%%%%%%%%%%%%%
+The above derivations may be repeated for the $gl(m|n+1)$ case so that we have tensor operators given by the $m+n+1$ square matrices
+$$
+\bar{\mathcal{B}}_{pq} = -(-1)^{(p)(q)} E_{qp}, ~~~~~\mathcal{B}_{pq} = -(-1)^{(p)} E_{pq}.
+$$
+that satisfy the usual polynomial identities 
+\begin{align*}
+\prod_{i=1}^m ({\cal \bar{B}} - \bar{\beta}_i) \prod^{n+1}_{\mu = 1} ({\cal \bar{B}} - \bar{\beta}_\mu) &= 0 \\
+	\prod^m_{i=1} ({\cal B} - \beta_i) \prod^{n+1}_{\mu=1} ({\cal B} - \beta_\mu) &= 0 
+\end{align*}
+with roots given by
+\begin{align*}
+\bar{\beta}_i  &= i - 1 -{\tilde{\Lambda}}_i , &1\leq i\leq m, \\
+\bar{\beta}_\mu &= {\tilde{\Lambda}}_\mu + m + 1 - \mu,  &1\leq \mu \leq n + 1, \\
+\beta_i &= {\tilde{\Lambda}}_i + m - n - 1 - i, &1\leq i\leq m, \\
+\beta_\mu &= \mu-{\tilde{\Lambda}}_\mu - n - 1, &1\leq \mu \leq n + 1.  
+\end{align*}
+Similarly, the $gl(m|n+1)$ projection operators are given by
+\begin{align}
+\bar{Q}[r] = \prod_{k\neq r}^{m+n+1}\left( \frac{{\cal \bar{B}}-\bar{\beta}_k}{\bar{\beta}_r -
+\bar{\beta}_k} \right),
+\ \ 
+Q[r] = \prod_{k\neq r}^{m+n+1}\left( \frac{
+{\cal B}-\beta_k}{\beta_r-\beta_k} \right),
+\end{align}
+so that the operators 
+$$ 
+\bar{C}_r = \bar{Q}[r]_{m+n+1}^{\ m+n+1}, ~~C_r = Q[r]_{\ m+n+1}^{m+n+1}
+$$
+are the $gl(m|n+1)$ analogues of the operators $\bar{c}_r$ and $c_r$ which correspond to the squares of Wigner coefficients.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
 
 \section{Wigner coefficients} 
 \label{Wigner}
-In this section we ...
+By considering the characteristic identities satisfied by the invariants $\bar{\mathcal{B}}$ and $\bar{\mathcal{A}}$ we may obtain the invariant $\bar{c}_r$ as a rational polynomial in terms of the roots $\bar{\beta}_i,\bar{\beta}_\mu$ and $\bar{\alpha}_i,\bar{\alpha}_\mu$. Specifically, we have \cite{GIW1}
+\begin{align}
+\bar{c}_s = \prod_{k\in \tilde{I}',k\neq s} \left(\bar{\beta}_s - \bar{\beta}_k\right)^{-1}\prod_{r\in
+I'} \left(\bar{\beta}_s - \bar{\alpha}_r - (-1)^{(r)}\right),\ \ s\in \tilde{I}'
+\end{align}
+and
+\begin{align}
+c_s = \prod_{k\in\tilde{I},k\neq s} (\beta_s - \beta_k)^{-1}\prod_{r\in I}(\beta_s -
+\alpha_r-(-1)^{(r)}),\ \ s\in \tilde{I}.
+\end{align}
+Changing notation we have
+\begin{align}
+\bar{c}_r = \prod_{k\in \tilde{I}',k\neq r} \left(\bar{\beta}_r - \bar{\beta}_k\right)^{-1}\prod_{k\in
+I'} \left(\bar{\beta}_r - \bar{\alpha}_k - (-1)^{(k)}\right),\ \ r\in \tilde{I}'
+\end{align}
+
+The definitions of the projections $\bar{Q}[r]$ and $\bar{P}[r]$ allow the calculation of the invariant $\bar{\rho}_{ru}$ in the following expression \cite{GIW2}
+\begin{align}
+(\bar{P}[u]\bar{Q}[r]\bar{P}[u])_p^{\ q} &= \bar{\rho}_{ru}\bar{P}[u]_p^{\ q}
+\label{equ6.3}
+\end{align}
+where the $\bar{\rho}_{ru}$ is a $gl(m|n)$ invariant operator given by
+\begin{align}
+\bar{\rho}_{ru} &= (\bar{\beta}_r-\bar{\alpha}_u +
+1)^{-1}(\bar{\beta}_r-\bar{\alpha}_u)^{-1}\bar{c}_r\bar{\delta}_u, \ \ \ (u) = 1, \nn\\
+\bar{\rho}_{ru} &= (\bar{\beta}_r-\bar{\alpha}_u +
+1)^{-1}(\bar{\beta}_r-\bar{\alpha}_u)^{-1}\bar{c}_r\bar{\delta}_u \ \ \ (u) = 0, u \neq r,
+\nn\\
+\bar{\rho}_{uu} &= \bar{c}_u \bar{\delta}_u, \ \ \ (u) = 0, \nn\\
+\bar{\rho}_{ru} &= (\bar{\beta}_r-\bar{\alpha}_u -
+1)^{-1}(\bar{\beta}_r-\bar{\alpha}_u)^{-1}\bar{c}_r \bar{\delta}_u \ \ \ gl(m)
+\hbox{~case,} 
+\label{RhoBarExp}
+\end{align}
+whose eigenvalues determine the square of $gl(m|n+1):gl(m|n)$ reduced vector Wigner
+coefficients and where
+\begin{align}
+\bar{\delta}_u &= (-1)^{|I'|} \prod_{k\in I',k\neq u}\left(\bar{\alpha}_u - \bar{\alpha}_s -
+(-1)^{(s)}\right)^{-1} \prod_{k\in \tilde{I}'}\left(\bar{\beta}_k - \bar{\alpha}_u \right), u\in I, \\
+\delta_r &= (-1)^{|I|} \prod_{s\in I,s\neq r} \left(\alpha_r - \alpha_s -
+(-1)^{(s)}\right)^{-1}\prod_{q\in\tilde{I}} \left(\beta_q - \alpha_r \right),\ \ r\in I',
+\end{align}
+are the reduced matrix elements.
+Note that $\bar{\rho}_{ru}$ in equation (\ref{RhoBarExp}) is non-vanishing only when $r\in \tilde{I}'$ and $u\in I$.
+
+Substituting the expressions for $\bar{c}_r$ and $\bar{\delta}_u$ into equation 
+ (\ref{RhoBarExp}) initially gives
+ $$
+ \bar{\rho}_{ru} = ...
+ $$
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
+\newpage
 \section{Summary of main results} 
 \label{resultsum}
 
