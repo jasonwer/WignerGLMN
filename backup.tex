@@ -24,7 +24,7 @@
 \begin{document}
 
 \begin{center}
-{\large\bf Reduced Wigner coefficients for unitary representations
+{\large\bf Fundamental Wigner coefficients for unitary representations
 of the Lie superalgebra $gl(m|n)$}\\
 ~~\\
 
@@ -50,7 +50,7 @@ method is applied in the context of both type 1 and type 2 unitary representatio
 \section{Introduction}
 In the previous publications \cite{GIW2,GIW3} the matrix elements of unitary representations of $gl(m|n)$ were given explicitly. The resulting closed-form expressions were obtained by utilizing the factorization of a matrix element into a Wigner coefficient and a reduced matrix element. The vector Wigner coefficients thus obtained allow us in this paper to obtain all fundamental $gl(m|n)$ Wigner coefficients (WCs) in the Gelfand-Tsetlin (GT) basis for both type 1 and type 2 unitary representations.
  
-A summary of the background regarding the characteristic identities and their associated invariants in Section \ref{prelim}. We then continue by introducing the Wigner coefficients in Section \ref{Wigner} and give their expressions in terms of representation labels of the representation concerned. Finally, Section 4 concludes with a discussion of these results.  
+A summary of the background regarding the characteristic identities and their associated invariants in Section \ref{prelim}. We then continue by introducing the Wigner coefficients in Section \ref{Wigner} and give their expressions in terms of representation labels of the representation concerned. Finally, Section \ref{resultsum} concludes with a discussion of these results.  
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -178,7 +178,7 @@ e_i\otimes \begin{array}{c} \Lambda \\ \lambda \\
 \left.
 e_i\otimes \begin{array}{c} \lambda \\
 {[\Lambda_0]} \end{array}
-\right\rangle,\label{Schur1}\\ 
+\right\rangle,\\ 
 ~~~ \nn\\
 \left\langle\left. 
 \begin{array}{c} \Lambda-\varepsilon_k\\ \lambda-\varepsilon_{0_r} \\ {[\Lambda'_0]} \end{array}
@@ -203,7 +203,7 @@ e_i\otimes \begin{array}{c} \lambda \\
 \left.
 \bar{e}_i\otimes \begin{array}{c} \lambda \\
 {[\Lambda_0]} \end{array}
-\right\rangle,\label{Schur2}\\
+\right\rangle,\\
 ~~\nn\\
 1 < i \leq m+n, \nn
 \end{align}
@@ -278,14 +278,14 @@ c_r &= \left| \left\langle\left.
 \begin{array}{c} \bar{\varepsilon}_1 \\
 \dot{0} \end{array}  ; \begin{array}{c} \Lambda \\
 \lambda \end{array}
-\right\rangle \nn \right|^2.
+\right\rangle \nn \right|^2,
 \end{align}
-%where $\bar{e}_r$ denote the Gelfand-Tsetlin (GT) basis states of the adjoint vector module.
+where $\bar{e}_r$ denote the Gelfand-Tsetlin (GT) basis states of the adjoint vector module.
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\section{Reduced Wigner coefficients} 
+\section{Wigner coefficients} 
 \label{Wigner}
 The above derivations may be repeated for the $gl(m|n+1)$ case so that we have tensor operators given by the $m+n+1$ square matrices
 $$
@@ -357,24 +357,7 @@ and
 whose eigenvalues determine the square of $gl(m|n+1):gl(m|n)$ reduced vector Wigner
 coefficients via
 \begin{align}
-\bar{\rho}_{ru}  &= \left| \left\langle\left. 
-\begin{array}{c} \Lambda+\varepsilon_r\\ \lambda+\varepsilon_{0_u} \end{array}
-\right|\right.
-\left.
-\begin{array}{c} \varepsilon_1 \\
-\varepsilon_{0_1} \end{array} 
-;
- \begin{array}{c} \Lambda \\
-\lambda \end{array}
-\right\rangle \right|^2, \\
-\rho_{ru} &= \left| \left\langle\left. 
-\begin{array}{c} \Lambda-\varepsilon_r\\ \lambda-\varepsilon_{0_u} \end{array}
-\right|\right.
-\left.
-\begin{array}{c} \bar{\varepsilon}_1 \\
-\bar{\varepsilon}_{0_1}  \end{array}  ; \begin{array}{c} \Lambda \\
-\lambda \end{array}
-\right\rangle \nn \right|^2,
+
 \end{align}
 and where
 \begin{align}
@@ -446,34 +429,9 @@ for $u$ even and
 \end{align*}
 for $u$ odd.
 
-The expressions for the RWCs of equations (\ref{Schur1}) and (\ref{Schur2}) together with their phases \cite{GIW2,GIW3} are then given by
-\begin{align*}
-\left\langle\left. 
-\begin{array}{c} \Lambda+\varepsilon_r\\ \lambda+\varepsilon_{0_u} 
- \end{array}
-\right|\right.
-\left.
-\begin{array}{c} \varepsilon_1 \\ \varepsilon_{0_1} 
- \end{array}
-; \begin{array}{c} \Lambda \\ \lambda
- \end{array}
-\right\rangle &= (-1)^{(r)(u)} S(r-u) (\bar{\rho}_{ru})^{1/2}
-,\\
-\left\langle\left. 
-\begin{array}{c} \Lambda-\varepsilon_r\\ \lambda-\varepsilon_{0_u} 
- \end{array}
-\right|\right.
-\left.
-\begin{array}{c} \bar{\varepsilon}_1 \\ \bar{\varepsilon}_{0_1} 
- \end{array}
-; \begin{array}{c} \Lambda \\ \lambda
- \end{array}
-\right\rangle &= (-1)^{(r)(u) +(r) + (u)} S(r-u) ({\rho_{ru}})^{1/2}
-\end{align*}
-where odd indices are considered greater than even indices and
-$$
-S(x) = sgn(x),~~S(0)=1.
-$$
+
+
+
 
 
 
@@ -537,9 +495,9 @@ $$
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-%\newpage
-%\section{Summary of main results} 
-%\label{resultsum}
+\newpage
+\section{Summary of main results} 
+\label{resultsum}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
@@ -554,11 +512,9 @@ $$
 %
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %
-\section*{Acknowledgments}
+%\section*{Acknowledgements}
 %
-This work was supported by the Australian Research Council through Discovery Project
-DP140101492. 
-%
+%We would like to thank...
 %
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %
