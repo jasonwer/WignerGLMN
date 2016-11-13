@@ -100,7 +100,7 @@ Similarly we have the vector matrix $\mathcal{A}$ with entries
 $$
 \mathcal{A}_{pq} = -(-1)^{(p)} E_{pq}.
 $$
-that satisify the polynomial identities
+that satisfy the polynomial identities
 \begin{align}
 \prod_{i=1}^m ({\cal A} - \alpha_i) \prod^n_{\mu = 1} ({\cal A} - \alpha_\mu) = 0
 \label{CharIdent2}
@@ -310,6 +310,27 @@ Similarly, the $gl(m|n+1)$ projection operators are given by
 \ \ 
 Q[r] = \prod_{k\neq r}^{m+n+1}\left( \frac{
 {\cal B}-\beta_k}{\beta_r-\beta_k} \right),
+\end{align}
+
+The betweenness conditions imply 
+\cite{GIW1}, for $1\leq i\leq m$, that we have only two cases
+\begin{align}
+\beta_i = \left\{ \begin{array}{rl} \alpha_i,& \tilde{\Lambda}_i = 1+\Lambda_i\\
+                                    \alpha_i - 1,& \tilde{\Lambda}_i = \Lambda_i 
+\end{array} \right.
+\nn
+%\label{equ5.4}
+\end{align}
+We therefore define the following index sets
+\begin{align}
+I_0 &=  \{ 1\leq i\leq m\ |\ \alpha_i=\beta_i\},\nn\\
+\bar{I}_0 &=  \{ 1\leq i\leq m\ |\ \alpha_i=1+\beta_i\},\nn\\
+I_1 &= \{ 1\leq\mu\leq n\},\nn\\
+I &= I_0\cup I_1,\nn\\
+I'&= \bar{I}_0\cup I_1,\nn\\
+\tilde{I} &= I\cup \{m+n+1\},\nn\\
+\tilde{I}' &= I'\cup \{m+n+1\}.
+\label{DefIndexSets} 
 \end{align}
 
 By considering the characteristic identities satisfied by the invariants $\bar{\mathcal{B}}$ and $\bar{\mathcal{A}}$ we may obtain the invariant $\bar{c}_r$ as a rational polynomial in terms of the roots $\bar{\beta}_i,\bar{\beta}_\mu$ and $\bar{\alpha}_i,\bar{\alpha}_\mu$. Specifically, we have \cite{GIW1}
