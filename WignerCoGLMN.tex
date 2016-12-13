@@ -35,8 +35,8 @@ School of Mathematics and Physics, The University of Queensland, St Lucia QLD 40
 \end{center}
 
 \begin{abstract}
-In this paper all fundamental Wigner coefficients are determined
-algebraically by the eigenvalues of certain generalized Casimir invariants. Here the
+In this paper fundamental Wigner coefficients are determined
+algebraically by considering the eigenvalues of certain generalized Casimir invariants. Here this
 method is applied in the context of both type 1 and type 2 unitary representations of the Lie superalgebra $gl(m|n)$.
 \end{abstract}
 
@@ -49,11 +49,11 @@ method is applied in the context of both type 1 and type 2 unitary representatio
 
 \section{Introduction}
 The application of the theory of Lie Superalgebras to problems in mathematical physics relies on the construction of an explicit set of basis states of an irreducible representation and also the explicit
-determination of Wigner (Clebsch-Gordan) coefficients. In the case of $U(n)$ the foundational papers by Gel'fand and Tsetlin \cite{GT1950,GT1950b} gave a novel construction of basis vectors for the irreducible representations of the unitary and orthogonal groups. Further work by Baird and Biedenharn \cite{BB1963} gave a proof of Gel'fand and Tsetlin's results while also giving , for the first time, both the fundamental and reduced Wigner coefficients for the Lie group U(n). In the same paper, the factorization of a matrix element into a Wigner coefficient and a reduced matrix element was also examined.
+determination of Wigner (Clebsch-Gordan) coefficients. Prior to the development of Lie superalgerbra theory, the foundational papers by Gel'fand and Tsetlin \cite{GT1950,GT1950b} gave a novel construction of basis vectors for the irreducible representations of the unitary and orthogonal groups. Further work by Baird and Biedenharn \cite{BB1963} gave a proof of Gel'fand and Tsetlin's results while also giving , for the first time, both the fundamental and reduced Wigner coefficients for the Lie group U(n). In the same paper, the factorization of a matrix element into a Wigner coefficient and a reduced matrix element was also examined.
 
-The utility of the characteristic identites (polynomial identities satisfied by generators of the Lie algebra) towards these goals became apparent during the 1970s and 80s and resulted in the algebraic determination of reduced matrix elements, \cite{Gould1978} raising and lowering generators \cite{Gould1980} and matrix elements, \cite{Gould1981,Gould1981b}. In the papers \cite{GIW2,GIW3} the matrix elements of unitary representations of $gl(m|n)$ were given explicitly using similar techniques. The resulting closed-form expressions were obtained by utilizing the factorization of a matrix element into a Wigner coefficient and a reduced matrix element. The vector Wigner coefficients thus obtained allow us in this paper to obtain all fundamental $gl(m|n)$ Wigner coefficients (WCs) in the Gelfand-Tsetlin (GT) basis for both type 1 and type 2 unitary representations.
+The utility of the characteristic identities (polynomial identities satisfied by generators of the Lie algebra) towards these goals became apparent during the 1970s and 80s and resulted in the algebraic determination of reduced matrix elements, \cite{Gould1978} raising and lowering generators \cite{Gould1980} and matrix elements, \cite{Gould1981,Gould1981b}. In the papers \cite{GIW2,GIW3} the matrix elements of unitary representations of $gl(m|n)$ were given explicitly using similar techniques. The resulting closed-form expressions were obtained by utilizing the factorization of a matrix element into a Wigner coefficient and a reduced matrix element. The vector Wigner coefficients thus obtained allow us in this paper to obtain all fundamental $gl(m|n)$ Wigner coefficients (WCs) in the Gelfand-Tsetlin (GT) basis for both type 1 and type 2 unitary representations. Although the resulting expressions for these Reduced Wigner coefficients have appeared in \cite{StoiVan2010}, in this presentation we obtain our results from first principles using algebraic methods that can be directly generalised to other Lie algebras as well as the quantum case.
  
-A summary of the background regarding the characteristic identities and their associated invariants in Section \ref{prelim}. We then continue by introducing the Wigner coefficients in Section \ref{Wigner} and give their expressions in terms of representation labels of the representation concerned. Finally, Section 4 concludes with a discussion of these results.  
+%A summary of the background regarding the characteristic identities and their associated invariants in Section \ref{prelim}. We then continue by introducing the Wigner coefficients in Section \ref{Wigner} and give their expressions in terms of representation labels of the representation concerned. Finally, Section 4 concludes with a discussion of these results.  
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -130,7 +130,12 @@ and
 \begin{align*}
 c_r = P[r]_{\ m+n}^{m+n}
 \end{align*}
-are essentially squares of reduced Wigner coefficients.
+are essentially squares of reduced Wigner coefficients. 
+
+We note that there is an invariant,
+nondegenerate sesquilinear form on the tensor product space $V(\Lambda) \otimes V(\mu)$ induced by the natural forms on $ V(\Lambda)$ and $V(\mu)$ \cite{GIW1}. The restriction of this form to the isotypic component of a given typical submodule is nondegenerate, which allows the definition of Wigner coefficients with respect to the form.
+
+
 
 
 Let $e_i$ denote the Gelfand-Tsetlin (GT) basis states for the vector module $V(\varepsilon_1)$ and ${e^\Lambda_\beta}$ denote the (GT) basis states for the irreducible module $V(\Lambda)$ of highest weight $\Lambda$. Then the matrix elements of $\bar{P}[r]$ can be given in the form
@@ -283,8 +288,10 @@ c_r &= \left| \left\langle\left.
 \lambda \end{array}
 \right\rangle \nn \right|^2.
 \end{align}
-%where $\bar{e}_r$ denote the Gelfand-Tsetlin (GT) basis states of the adjoint vector module.
+where $\bar{e}_r$ denote the Gelfand-Tsetlin (GT) basis states of the adjoint vector module.
 
+We therefore see that the matrix elements of the projections $\bar{P}[r]_{m+n}^{\ m+n}$ and $P[r]_{\ m+n}^{m+n}$ determine
+the squares of the fundamental Wigner coefficients and depend only on the top two rows of the corresponding Gelfand-Tsetlin basis states.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
@@ -639,8 +646,7 @@ Springer-Verlag (1988) 657.
 %  
 % \bibitem{Palev1989} T. D. Palev, Funct. Anal. Appl. {\bf 23} (1989) 141.
 % 
-% \bibitem{StoiVan2010} N.I. Stoilova and J. Van der Jeugt, J. Math. Phys. {\bf 51} (2010)
-%  093523.
+\bibitem{StoiVan2010} N.I. Stoilova and J. Van der Jeugt, J. Math. Phys. {\bf 51} (2010) 093523.
 % 
 % \bibitem{Molev2011} A.I. Molev, Bull. Inst. Math. Acad. Sinica {\bf 6} (2011) 415.
 % 
