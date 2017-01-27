@@ -156,7 +156,7 @@ where
 $$
 \left\langle e^{\Lambda-\varepsilon_r}_\gamma | \bar{e}_j \otimes e^\Lambda_\alpha \right\rangle,
 $$
-are the dual fundamental Wigner coefficients.
+are the dual fundamental Wigner coefficients. The above quantities may be expressed in terms of the $gl(m|n+1)$ highest weight labels of $\Lambda$ and the highest weight labels of the $gl(m|n)$ subalgebra.
 
 From Schur's lemma we observe that the fundamental WCs factorize as follows
 \begin{align}
@@ -213,7 +213,8 @@ e_i\otimes \begin{array}{c} \lambda \\
 1 < i \leq m+n, \nn
 \end{align}
 where $1 < k \leq m+n+1$,~$1 < r \leq m+n$, 
-$\Lambda$ denotes the highest weight of $gl(m|n+1)$, $\lambda$ denotes the highest weight of $gl(m|n)$ and $[\Lambda_0]$ denotes the GT pattern of the $gl(m|n-1)$ subalgebra.
+$\Lambda$ denotes the highest weight of $gl(m|n+1)$, $\lambda$ denotes the highest weight of $gl(m|n)$ and $[\Lambda_0]$ denotes the GT pattern of the $gl(m|n-1)$ subalgebra. In addition, the first term on the rhs of equations (5) and (6) is a reduced Wigner coeficient (RWC) which is independent of the highest
+weight labels of $[\Lambda_0]$ and $[\Lambda'_0]$.
 
 Setting $i=m+n$ gives
 \begin{align}
@@ -257,6 +258,7 @@ and
 \lambda \end{array}
 \right\rangle  , \label{WCBraKet2}
 \end{align}
+which are also independent of $[\Lambda_0]$ and $[\Lambda'_0]$. 
 The WCs in equations (\ref{WCBraKet1}) and (\ref{WCBraKet2}) are given by the eigenvalues of the invariants
 $$ 
 \bar{c}_r = \bar{P}[r]_{m+n}^{\ m+n}, ~~c_r = P[r]_{\ m+n}^{m+n}
@@ -350,6 +352,8 @@ and
 c_r = \prod_{k\in \tilde{I},k\neq r} \left(\beta_r - \beta_k \right)^{-1}\prod_{k\in
 I} \left(\beta_r - \alpha_k - (-1)^{(k)}\right),\ \ r\in \tilde{I}
 \end{align}
+
+Note that equations (12) and (13) are positive as expected. 
 
 The definitions of the projections $\bar{Q}[r]$ and $\bar{P}[r]$ allow the calculation of the invariant $\bar{\rho}_{ru}$ in the following expressions \cite{GIW2}
 \begin{align}
@@ -472,10 +476,12 @@ for $u$ even and
 \right)
 ,\ \ r\in \tilde{I'},u\in I_1
 \end{align*}
-for $u$ odd.
+for $u$ odd. Note that the expressions for $\rho_{ru}$ and $\bar{\rho}_{ru}$ always evaluate to positive values. 
+
+\section{Summary}
 
 The expressions for the RWCs of equations (\ref{Schur1}) and (\ref{Schur2}) together with their phases \cite{GIW2,GIW3} are then given by
-\begin{align*}
+\begin{align}
 \left\langle\left. 
 \begin{array}{c} \Lambda+\varepsilon_r\\ \lambda+\varepsilon_{0_u} 
  \end{array}
@@ -486,7 +492,7 @@ The expressions for the RWCs of equations (\ref{Schur1}) and (\ref{Schur2}) toge
 ; \begin{array}{c} \Lambda \\ \lambda
  \end{array}
 \right\rangle &= (-1)^{(r)(u)} S(r-u) (\bar{\rho}_{ru})^{1/2}
-,\\
+,  \label{FinalBarred} \\
 \left\langle\left. 
 \begin{array}{c} \Lambda-\varepsilon_r\\ \lambda-\varepsilon_{0_u} 
  \end{array}
@@ -496,14 +502,14 @@ The expressions for the RWCs of equations (\ref{Schur1}) and (\ref{Schur2}) toge
  \end{array}
 ; \begin{array}{c} \Lambda \\ \lambda
  \end{array}
-\right\rangle &= (-1)^{(r)(u) +(r) + (u)} S(r-u) ({\rho_{ru}})^{1/2}
-\end{align*}
+\right\rangle &= (-1)^{(r)(u) +(r) + (u)} S(r-u) ({\rho_{ru}})^{1/2} \label{FinalUnBarred}
+\end{align}
 where odd indices are considered greater than even indices and
 $$
 S(x) = sgn(x),~~S(0)=1.
 $$
 
-
+To guarantee the existence of an orthonormal basis it is essential to utilize equation (\ref{FinalBarred}) when $\Lambda$ is the highest weight of a type 1 (covariant) unitary module and equation (\ref{FinalUnBarred}) when $\Lambda$ is the highest weight of a type 2 (contravariant) unitary module. It is important and interesting to note that equations (\ref{FinalBarred}) and (\ref{FinalUnBarred}) may still be used to give Wigner coefficients in the mixed tensor case since we have a unique invariant nondegenerate sesquilinear form under which the construction of Wigner coefficients is possible.
 
 
 
