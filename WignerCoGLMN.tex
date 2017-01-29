@@ -277,7 +277,7 @@ since from equations (\ref{BarPij}) and (\ref{Pij}) we have
 ;
  \begin{array}{c} \Lambda \\
 \lambda \end{array}
-\right\rangle \right|^2, \\
+\right\rangle \right|^2, \nn\\
 c_r &= \left| \left\langle\left. 
 \begin{array}{c} \Lambda-\varepsilon_r\\ \lambda \end{array}
 \right|\right.
@@ -285,7 +285,7 @@ c_r &= \left| \left\langle\left.
 \begin{array}{c} \bar{\varepsilon}_1 \\
 \dot{0} \end{array}  ; \begin{array}{c} \Lambda \\
 \lambda \end{array}
-\right\rangle \nn \right|^2.
+\right\rangle \right|^2, \label{WigCoefCs}
 \end{align}
 where $\bar{e}_r$ denote the Gelfand-Tsetlin (GT) basis states of the adjoint vector module.
 
@@ -353,7 +353,7 @@ c_r = \prod_{k\in \tilde{I},k\neq r} \left(\beta_r - \beta_k \right)^{-1}\prod_{
 I} \left(\beta_r - \alpha_k - (-1)^{(k)}\right),\ \ r\in \tilde{I}
 \end{align}
 
-Note that equations (12) and (13) are positive as expected. 
+Note that equations (12) and (13) are positive as expected and serve to determine the Wigner coefficients of equation (\ref{WigCoefCs}).
 
 The definitions of the projections $\bar{Q}[r]$ and $\bar{P}[r]$ allow the calculation of the invariant $\bar{\rho}_{ru}$ in the following expressions \cite{GIW2}
 \begin{align}
@@ -482,7 +482,7 @@ for $u$ odd. Note that the expressions for $\rho_{ru}$ and $\bar{\rho}_{ru}$ alw
 
 The expressions for the RWCs of equations (\ref{Schur1}) and (\ref{Schur2}) together with their phases \cite{GIW2,GIW3} are then given by
 \begin{align}
-\left\langle\left. 
+& \left\langle\left. 
 \begin{array}{c} \Lambda+\varepsilon_r\\ \lambda+\varepsilon_{0_u} 
  \end{array}
 \right|\right.
@@ -491,9 +491,52 @@ The expressions for the RWCs of equations (\ref{Schur1}) and (\ref{Schur2}) toge
  \end{array}
 ; \begin{array}{c} \Lambda \\ \lambda
  \end{array}
-\right\rangle &= (-1)^{(r)(u)} S(r-u) (\bar{\rho}_{ru})^{1/2}
-,  \label{FinalBarred} \\
-\left\langle\left. 
+\right\rangle = (-1)^{(r)(u)} S(r-u) \nn\\
+&~~\times 
+\left[ 
+\frac{
+(-1)^{|I'|} \prod_{k\in\tilde{I'},k \neq r} \left(\bar{\beta}_k - \bar{\alpha}_u \right)
+\prod_{k\in I'} \left(\bar{\beta}_r - \bar{\alpha}_k - (-1)^{(k)}\right) 
+}
+{
+(\bar{\beta}_r-\bar{\alpha}_u + 1)
+\prod_{k\in \tilde{I'},k\neq r} \left(\bar{\beta}_r - \bar{\beta}_k \right)
+\prod_{k\in I',k\neq u} \left(\bar{\alpha}_u - \bar{\alpha}_k - (-1)^{(k)}\right)
+}
+\right]^{1/2}
+, \ \ r\in \tilde{I'},u\in I   \label{FinalBarredEven}
+\end{align}
+
+
+\begin{align}
+& \left\langle\left. 
+\begin{array}{c} \Lambda+\varepsilon_r\\ \lambda+\varepsilon_{0_u} 
+ \end{array}
+\right|\right.
+\left.
+\begin{array}{c} \varepsilon_1 \\ \varepsilon_{0_1} 
+ \end{array}
+; \begin{array}{c} \Lambda \\ \lambda
+ \end{array}
+\right\rangle = (-1)^{(r)(u)} S(r-u) \nn\\
+&~~\times \left[ (-1)^{|I'|} \prod_{k\in \tilde{I'},k\neq r} 
+\left(
+\frac 
+{\bar{\beta}_k - \bar{\alpha}_u  }
+{\bar{\beta}_r - \bar{\beta}_k }
+\right)
+\prod_{k\in I',k \neq u} 
+\left(
+\frac
+{ \bar{\beta}_r - \bar{\alpha}_k - (-1)^{(k)} }
+{\bar{\alpha}_u - \bar{\alpha}_k - (-1)^{(k)} }
+\right)
+\right]^{1/2}
+,\ \ r\in \tilde{I'},u\in I_1 \label{FinalBarredOdd}
+\end{align}
+
+\begin{align}
+&\left\langle\left. 
 \begin{array}{c} \Lambda-\varepsilon_r\\ \lambda-\varepsilon_{0_u} 
  \end{array}
 \right|\right.
@@ -502,33 +545,72 @@ The expressions for the RWCs of equations (\ref{Schur1}) and (\ref{Schur2}) toge
  \end{array}
 ; \begin{array}{c} \Lambda \\ \lambda
  \end{array}
-\right\rangle &= (-1)^{(r)(u) +(r) + (u)} S(r-u) ({\rho_{ru}})^{1/2} \label{FinalUnBarred}
+\right\rangle
+= (-1)^{(r)(u) +(r) + (u)} S(r-u)
+\nn \\
+&~~\times
+\left[
+\frac{
+(-1)^{|I|}
+\prod_{k\in I} \left(\beta_r - \alpha_k - (-1)^{(k)}\right)
+\prod_{k\in\tilde{I},k \neq r} \left(\beta_k - \alpha_u \right)
+}
+{
+({\beta}_r-{\alpha}_u + 1)
+\prod_{k\in \tilde{I},k\neq r} \left(\beta_r - \beta_k \right)
+\prod_{k\in I,k\neq u} \left(\alpha_u - \alpha_k - (-1)^{(k)}\right)
+} 
+\right]^{1/2}
+,\ \ r\in \tilde{I},u\in I' \label{FinalUnBarredEven}
 \end{align}
-where odd indices are considered greater than even indices and
+
+\begin{align}
+&\left\langle\left. 
+\begin{array}{c} \Lambda-\varepsilon_r\\ \lambda-\varepsilon_{0_u} 
+ \end{array}
+\right|\right.
+\left.
+\begin{array}{c} \bar{\varepsilon}_1 \\ \bar{\varepsilon}_{0_1} 
+ \end{array}
+; \begin{array}{c} \Lambda \\ \lambda
+ \end{array}
+\right\rangle = (-1)^{(r)(u) +(r) + (u)} S(r-u) 
+\nn\\
+&~~\times
+\left[
+ (-1)^{|I|} \prod_{k\in \tilde{I},k\neq r} 
+\left(
+\frac 
+{\beta_k - \alpha_u  }
+{\beta_r - \beta_k }
+\right)
+\prod_{k\in I,k \neq u} 
+\left(
+\frac
+{ \beta_r - \alpha_k - (-1)^{(k)} }
+{\alpha_u - \alpha_k - (-1)^{(k)} }
+\right)
+\right]^{1/2}
+,\ \ r\in \tilde{I},u\in I_1  \label{FinalUnBarredOdd}
+\end{align}
+where the positive square root is always taken, odd indices are considered greater than even indices, 
 $$
 S(x) = sgn(x),~~S(0)=1.
 $$
+and where we recall
 
-To guarantee the existence of an orthonormal basis it is essential to utilize equation (\ref{FinalBarred}) when $\Lambda$ is the highest weight of a type 1 (covariant) unitary module and equation (\ref{FinalUnBarred}) when $\Lambda$ is the highest weight of a type 2 (contravariant) unitary module. It is important and interesting to note that equations (\ref{FinalBarred}) and (\ref{FinalUnBarred}) may still be used to give Wigner coefficients in the mixed tensor case since we have a unique invariant nondegenerate sesquilinear form under which the construction of Wigner coefficients is possible.
+\begin{align*}
+{\bar{\alpha}}_i &= i - 1 -\Lambda_i  , &1\leq i\leq m-1, \\
+{\bar{\alpha}}_\mu &= \Lambda_\mu + m + 1 - \mu  ,  &1\leq \mu \leq n , \\ 
+{\alpha}_i &= \Lambda_i + m - n - i  , &1\leq i\leq m-1, \\
+{\alpha}_\mu &= \mu - \Lambda_\mu -n, &1\leq \mu \leq n , \\
+\bar{\beta}_i  &= i - 1 -{\tilde{\Lambda}}_i , &1\leq i\leq m, \\
+\bar{\beta}_\mu &= {\tilde{\Lambda}}_\mu + m + 1 - \mu,  &1\leq \mu \leq n + 1, \\
+\beta_i &= {\tilde{\Lambda}}_i + m - n - 1 - i, &1\leq i\leq m, \\
+\beta_\mu &= \mu-{\tilde{\Lambda}}_\mu - n - 1, &1\leq \mu \leq n + 1.  
+\end{align*}
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+To guarantee the existence of an orthonormal basis it is essential to utilize equations (\ref{FinalBarredEven}) and (\ref{FinalBarredOdd}) when $\Lambda$ is the highest weight of a type 1 (covariant) unitary module and equations (\ref{FinalUnBarredEven}) and (\ref{FinalUnBarredOdd}) when $\Lambda$ is the highest weight of a type 2 (contravariant) unitary module. It is important and interesting to note that these final equations may still be used to give Wigner coefficients in the mixed tensor case since we have a unique invariant nondegenerate sesquilinear form under which the construction of Wigner coefficients is possible.
 
 
 
@@ -601,7 +683,6 @@ DP140101492.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %
 
-\newpage
 \begin{thebibliography}{10}
 
 %\bibitem{ZhaGou1990} M.D. Gould and R.B. Zhang, J. Math. Phys. {\bf 31} (1990) 2552.
