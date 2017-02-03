@@ -156,7 +156,7 @@ where
 $$
 \left\langle e^{\Lambda-\varepsilon_r}_\gamma | \bar{e}_j \otimes e^\Lambda_\alpha \right\rangle,
 $$
-are the dual fundamental Wigner coefficients. The above quantities may be expressed in terms of the $gl(m|n+1)$ highest weight labels of $\Lambda$ and the highest weight labels of the $gl(m|n)$ subalgebra.
+are the dual fundamental Wigner coefficients. The above quantities may be expressed in terms of the $gl(m|n)$ highest weight labels of $\Lambda$ and the highest weight labels of the $gl(m|n-1)$ subalgebra.
 
 From Schur's lemma we observe that the fundamental WCs factorize as follows
 \begin{align}
@@ -210,10 +210,10 @@ e_i\otimes \begin{array}{c} \lambda \\
 {[\Lambda_0]} \end{array}
 \right\rangle,\label{Schur2}\\
 ~~\nn\\
-1 < i \leq m+n, \nn
+1 < i < m+n, \nn
 \end{align}
-where $1 < k \leq m+n+1$,~$1 < r \leq m+n$, 
-$\Lambda$ denotes the highest weight of $gl(m|n+1)$, $\lambda$ denotes the highest weight of $gl(m|n)$ and $[\Lambda_0]$ denotes the GT pattern of the $gl(m|n-1)$ subalgebra. In addition, the first term on the rhs of equations (5) and (6) is a reduced Wigner coeficient (RWC) which is independent of the highest
+where $1 < k \leq m+n$,~$1 < r \leq m+n-1$, 
+$\Lambda$ denotes the highest weight of $gl(m|n)$, $\lambda$ denotes the highest weight of $gl(m|n-1)$ and $[\Lambda_0]$ denotes the GT pattern of the $gl(m|n-2)$ subalgebra. In addition, the first term on the rhs of equations (5) and (6) is a reduced Wigner coeficient (RWC) which is independent of the highest
 weight labels of $[\Lambda_0]$ and $[\Lambda'_0]$.
 
 Setting $i=m+n$ gives
@@ -233,7 +233,7 @@ e_{m+n} \otimes \begin{array}{c} \Lambda \\ \lambda \\
 \varepsilon_1 \\ \dot{0}
 \end{array}
 ;
-\begin{array}{c} \Lambda \\
+\begin{array}{c} \Lambda \\ 
 \lambda \end{array}
 \right\rangle  , \label{WCBraKet1}
 \end{align}
@@ -258,7 +258,7 @@ and
 \lambda \end{array}
 \right\rangle  , \label{WCBraKet2}
 \end{align}
-which are also independent of $[\Lambda_0]$ and $[\Lambda'_0]$. 
+where the RWC on the rhs is independent of $[\Lambda_0]$ and $[\Lambda'_0]$ as expected. 
 The WCs in equations (\ref{WCBraKet1}) and (\ref{WCBraKet2}) are given by the eigenvalues of the invariants
 $$ 
 \bar{c}_r = \bar{P}[r]_{m+n}^{\ m+n}, ~~c_r = P[r]_{\ m+n}^{m+n}
@@ -296,97 +296,97 @@ the squares of the fundamental Wigner coefficients and depend only on the top tw
 
 \section{Reduced Wigner coefficients} 
 \label{Wigner}
-The above derivations may be repeated for the $gl(m|n+1)$ case so that we have tensor operators given by the $m+n+1$ square matrices
+The above derivations may be repeated for the $gl(m|n-1)$ case so that we have tensor operators given by the $m+n-1$ square matrices
 $$
-\bar{\mathcal{B}}_{pq} = -(-1)^{(p)(q)} E_{qp}, ~~~~~\mathcal{B}_{pq} = -(-1)^{(p)} E_{pq}.
+\bar{\mathcal{A}_0}_{pq} = -(-1)^{(p)(q)} E_{qp}, ~~~~~{\mathcal{A}_0}_{pq} = -(-1)^{(p)} E_{pq}.
 $$
 that satisfy the usual polynomial identities 
 \begin{align*}
-\prod_{i=1}^m ({\cal \bar{B}} - \bar{\beta}_i) \prod^{n+1}_{\mu = 1} ({\cal \bar{B}} - \bar{\beta}_\mu) &= 0 \\
-	\prod^m_{i=1} ({\cal B} - \beta_i) \prod^{n+1}_{\mu=1} ({\cal B} - \beta_\mu) &= 0 
+\prod_{i=1}^m (\bar{\mathcal{A}_0} - \bar{\alpha_0}_i) \prod^{n+1}_{\mu = 1} (\bar{\mathcal{A}_0} - \bar{\alpha_0}_\mu) &= 0 \\
+	\prod^m_{i=1} (\mathcal{A}_0 - {\alpha_0}_i ) \prod^{n+1}_{\mu=1} (\mathcal{A}_0 - {\alpha_0}_\mu) &= 0 
 \end{align*}
 with roots given by
 \begin{align*}
-\bar{\beta}_i  &= i - 1 -{\tilde{\Lambda}}_i , &1\leq i\leq m, \\
-\bar{\beta}_\mu &= {\tilde{\Lambda}}_\mu + m + 1 - \mu,  &1\leq \mu \leq n + 1, \\
-\beta_i &= {\tilde{\Lambda}}_i + m - n - 1 - i, &1\leq i\leq m, \\
-\beta_\mu &= \mu-{\tilde{\Lambda}}_\mu - n - 1, &1\leq \mu \leq n + 1.  
+\bar{\alpha_0}_i  &= i - 1 -{\lambda}_i , &1\leq i\leq m, \\
+\bar{\alpha_0}_\mu &= {\lambda}_\mu + m + 1 - \mu,  &1\leq \mu \leq n - 1, \\
+{\alpha_0}_i &= {\lambda}_i + m - n + 1 - i, &1\leq i\leq m, \\
+{\alpha_0}_\mu &= \mu-{\lambda}_\mu - n + 1, &1\leq \mu \leq n - 1.  
 \end{align*}
 Similarly, the $gl(m|n+1)$ projection operators are given by
 \begin{align}
-\bar{Q}[r] = \prod_{k\neq r}^{m+n+1}\left( \frac{{\cal \bar{B}}-\bar{\beta}_k}{\bar{\beta}_r -
-\bar{\beta}_k} \right),
+\bar{P_0}[r] = \prod_{k\neq r}^{m+n+1}\left( \frac{\bar{\mathcal{A}_0}  -\bar{\alpha_0}_k}{\bar{\alpha_0}_r - \bar{\alpha_0}_k} \right),
 \ \ 
-Q[r] = \prod_{k\neq r}^{m+n+1}\left( \frac{
-{\cal B}-\beta_k}{\beta_r-\beta_k} \right),
+P_0[r] = \prod_{k\neq r}^{m+n+1}\left( 
+\frac{\mathcal{A}_0-{\alpha_0}_k}
+{{\alpha_0}_r-{\alpha_0}_k} \right),
 \end{align}
 
 The betweenness conditions imply 
 \cite{GIW1}, for $1\leq i\leq m$, that we have only two cases
 \begin{align}
-\beta_i = \left\{ \begin{array}{rl} \alpha_i,& \tilde{\Lambda}_i = 1+\Lambda_i\\
-                                    \alpha_i - 1,& \tilde{\Lambda}_i = \Lambda_i 
+\alpha_i = \left\{ \begin{array}{rl} {\alpha_0}_i,& \Lambda_i = 1+\lambda_i\\
+                                    {\alpha_0}_i - 1,& \Lambda_i = \lambda_i 
 \end{array} \right.
 \nn
 %\label{equ5.4}
 \end{align}
 We therefore define the following index sets
 \begin{align}
-I_0 &=  \{ 1\leq i\leq m\ |\ \alpha_i=\beta_i\},\nn\\
-\bar{I}_0 &=  \{ 1\leq i\leq m\ |\ \alpha_i=1+\beta_i\},\nn\\
-I_1 &= \{ 1\leq\mu\leq n\},\nn\\
+I_0 &=  \{ 1\leq i\leq m\ |\ {\alpha_0}_i=\alpha_i\},\nn\\
+\bar{I}_0 &=  \{ 1\leq i\leq m\ |\ {\alpha_0}_i=1+\alpha_i\},\nn\\
+I_1 &= \{ 1\leq\mu\leq n-1\},\nn\\
 I &= I_0\cup I_1,\nn\\
 I'&= \bar{I}_0\cup I_1,\nn\\
-\tilde{I} &= I\cup \{m+n+1\},\nn\\
-\tilde{I}' &= I'\cup \{m+n+1\}.
+\tilde{I} &= I\cup \{m+n\},\nn\\
+\tilde{I}' &= I'\cup \{m+n\}.
 \label{DefIndexSets} 
 \end{align}
 
-By considering the characteristic identities satisfied by the invariants $\bar{\mathcal{B}}$ and $\bar{\mathcal{A}}$ we may obtain the invariant $\bar{c}_r$ as a rational polynomial in terms of the roots $\bar{\beta}_i,\bar{\beta}_\mu$ and $\bar{\alpha}_i,\bar{\alpha}_\mu$. Specifically, we have \cite{GIW1}
+By considering the characteristic identities satisfied by the invariants $\bar{\mathcal{A}}$ and $\bar{\mathcal{A}}_0$ we may obtain the invariant $\bar{c}_r$ as a rational polynomial in terms of the roots $\bar{\alpha}_i,\bar{\alpha}_\mu$ and $\bar{\alpha_0}_i,\bar{\alpha_0}_\mu$. Specifically, we have \cite{GIW1}
 \begin{align}
-\bar{c}_r = \prod_{k\in \tilde{I}',k\neq r} \left(\bar{\beta}_r - \bar{\beta}_k\right)^{-1}\prod_{k\in
-I'} \left(\bar{\beta}_r - \bar{\alpha}_k - (-1)^{(k)}\right),\ \ r\in \tilde{I}',
+\bar{c}_r = \prod_{k\in \tilde{I}',k\neq r} \left(\bar{\alpha}_r - \bar{\alpha}_k\right)^{-1}\prod_{k\in
+I'} \left(\bar{\alpha}_r - \bar{\alpha_0}_k - (-1)^{(k)}\right),\ \ r\in \tilde{I}',
 \end{align}
 and
 \begin{align}
-c_r = \prod_{k\in \tilde{I},k\neq r} \left(\beta_r - \beta_k \right)^{-1}\prod_{k\in
-I} \left(\beta_r - \alpha_k - (-1)^{(k)}\right),\ \ r\in \tilde{I}
+c_r = \prod_{k\in \tilde{I},k\neq r} \left(\alpha_r - \alpha_k \right)^{-1}\prod_{k\in
+I} \left(\alpha_r - {\alpha_0}_k - (-1)^{(k)}\right),\ \ r\in \tilde{I}
 \end{align}
 
 Note that equations (12) and (13) are positive as expected and serve to determine the Wigner coefficients of equation (\ref{WigCoefCs}).
 
 The definitions of the projections $\bar{Q}[r]$ and $\bar{P}[r]$ allow the calculation of the invariant $\bar{\rho}_{ru}$ in the following expressions \cite{GIW2}
 \begin{align}
-(\bar{P}[u]\bar{Q}[r]\bar{P}[u])_p^{\ q} &= \bar{\rho}_{ru}\bar{P}[u]_p^{\ q},\\
-({P}[u]{Q}[r]{P}[u])_p^{\ q} &= {\rho}_{ru}{P}[u]_p^{\ q}
+(\bar{P}_0[u]\bar{P}[r]\bar{P}_0[u])_p^{\ q} &= \bar{\rho}_{ru}\bar{P}_0[u]_p^{\ q},\\
+({P_0}[u]{P}[r]{P_0}[u])_p^{\ q} &= {\rho}_{ru}{P_0}[u]_p^{\ q}
 \end{align}
-where $\bar{\rho}_{ru}$ and ${\rho}_{ru}$ are $gl(m|n)$ invariant operators given by
+where $\bar{\rho}_{ru}$ and ${\rho}_{ru}$ are $gl(m|n-1)$ invariant operators given by
 \begin{align}
-\bar{\rho}_{ru} &= (\bar{\beta}_r-\bar{\alpha}_u +
-1)^{-1}(\bar{\beta}_r-\bar{\alpha}_u)^{-1}\bar{c}_r\bar{\delta}_u, \ \ \ (u) = 1, \nn\\
-\bar{\rho}_{ru} &= (\bar{\beta}_r-\bar{\alpha}_u +
-1)^{-1}(\bar{\beta}_r-\bar{\alpha}_u)^{-1}\bar{c}_r\bar{\delta}_u \ \ \ (u) = 0, u \neq r,
+\bar{\rho}_{ru} &= (\bar{\alpha}_r-\bar{\alpha_0}_u +
+1)^{-1}(\bar{\alpha}_r-\bar{\alpha_0}_u)^{-1}\bar{c}_r\bar{\delta}_u, \ \ \ (u) = 1, \nn\\
+\bar{\rho}_{ru} &= (\bar{\alpha}_r-\bar{\alpha_0}_u +
+1)^{-1}(\bar{\alpha}_r-\bar{\alpha_0}_u)^{-1}\bar{c}_r\bar{\delta}_u \ \ \ (u) = 0, u \neq r,
 \nn\\
 \bar{\rho}_{uu} &= \bar{c}_u \bar{\delta}_u, \ \ \ (u) = 0, \nn\\
-\bar{\rho}_{ru} &= (\bar{\beta}_r-\bar{\alpha}_u -
-1)^{-1}(\bar{\beta}_r-\bar{\alpha}_u)^{-1}\bar{c}_r \bar{\delta}_u \ \ \ gl(m)
+\bar{\rho}_{ru} &= (\bar{\alpha}_r-\bar{\alpha_0}_u -
+1)^{-1}(\bar{\alpha}_r-\bar{\alpha_0}_u)^{-1}\bar{c}_r \bar{\delta}_u \ \ \ gl(m)
 \hbox{~case,} 
 \label{RhoBarExp}
 \end{align}
 and
 \begin{align}
-{\rho}_{ru} &= ({\beta}_r-{\alpha}_u +
-1)^{-1}({\beta}_r-{\alpha}_u)^{-1}{c}_r{\delta}_u, \ \ \ (u) = 1, \nn\\
-{\rho}_{ru} &= ({\beta}_r-{\alpha}_u +
-1)^{-1}({\beta}_r-{\alpha}_u)^{-1}{c}_r{\delta}_u \ \ \ (u) = 0, u \neq r,
+{\rho}_{ru} &= ({\alpha}_r-{\alpha_0}_u +
+1)^{-1}({\alpha}_r-{\alpha_0}_u)^{-1}{c}_r{\delta}_u, \ \ \ (u) = 1, \nn\\
+{\rho}_{ru} &= ({\alpha}_r-{\alpha_0}_u +
+1)^{-1}({\alpha}_r-{\alpha_0}_u)^{-1}{c}_r{\delta}_u \ \ \ (u) = 0, u \neq r,
 \nn\\
 {\rho}_{uu} &= {c}_u {\delta}_u, \ \ \ (u) = 0, \nn\\
-{\rho}_{ru} &= ({\beta}_r-{\alpha}_u -
-1)^{-1}({\beta}_r-{\alpha}_u)^{-1}{c}_r {\delta}_u \ \ \ gl(m)
+{\rho}_{ru} &= ({\alpha}_r-{\alpha_0}_u -
+1)^{-1}({\alpha}_r-{\alpha_0}_u)^{-1}{c}_r {\delta}_u \ \ \ gl(m)
 \hbox{~case,} 
 \label{RhoExp}
 \end{align}
-whose eigenvalues determine the square of $gl(m|n+1):gl(m|n)$ reduced vector Wigner
+whose eigenvalues determine the square of $gl(m|n):gl(m|n-1)$ reduced vector Wigner
 coefficients via
 \begin{align}
 \bar{\rho}_{ru}  &= \left| \left\langle\left. 
@@ -410,10 +410,10 @@ coefficients via
 \end{align}
 and where
 \begin{align}
-\bar{\delta}_u &= (-1)^{|I'|} \prod_{k\in I',k\neq u}\left(\bar{\alpha}_u - \bar{\alpha}_k -
-(-1)^{(s)}\right)^{-1} \prod_{k\in \tilde{I}'}\left(\bar{\beta}_k - \bar{\alpha}_u \right), u\in I, \\
-\delta_u &= (-1)^{|I|} \prod_{k\in I,k\neq u} \left(\alpha_u - \alpha_k -
-(-1)^{(k)}\right)^{-1}\prod_{k\in\tilde{I}} \left(\beta_k - \alpha_u \right),\ \ u\in I',
+\bar{\delta}_u &= (-1)^{|I'|} \prod_{k\in I',k\neq u}\left(\bar{\alpha_0}_u - \bar{\alpha_0}_k -
+(-1)^{(s)}\right)^{-1} \prod_{k\in \tilde{I}'}\left(\bar{\alpha}_k - \bar{\alpha_0}_u \right), u\in I, \\
+\delta_u &= (-1)^{|I|} \prod_{k\in I,k\neq u} \left({\alpha_0}_u - {\alpha_0}_k -
+(-1)^{(k)}\right)^{-1}\prod_{k\in\tilde{I}} \left(\alpha_k - {\alpha_0}_u \right),\ \ u\in I',
 \end{align}
 are the reduced matrix elements.
 Note that $\bar{\rho}_{ru}$ in equation (\ref{RhoBarExp}) is non-vanishing only when $r\in \tilde{I}'$ and $u\in I$ while ${\rho}_{ru}$ in equation (\ref{RhoExp}) is non-vanishing only when $r\in \tilde{I}$ and $u\in I'$.
@@ -421,32 +421,32 @@ Note that $\bar{\rho}_{ru}$ in equation (\ref{RhoBarExp}) is non-vanishing only 
 Substituting the expressions for ${c}_r$ and ${\delta}_u$ into equation 
  (\ref{RhoExp}) initially gives
 \begin{align*}
-{\rho}_{ru} &= ({\beta}_r-{\alpha}_u + 1)^{-1}({\beta}_r-{\alpha}_u)^{-1} \prod_{k\in \tilde{I},k\neq r} \left(\beta_r - \beta_k \right)^{-1}\prod_{k\in
-I} \left(\beta_r - \alpha_k - (-1)^{(k)}\right) \\
-& ~\times (-1)^{|I|} \prod_{k\in I,k\neq u} \left(\alpha_u - \alpha_k -
-(-1)^{(k)}\right)^{-1}\prod_{k\in\tilde{I}} \left(\beta_k - \alpha_u \right),\ \ r\in \tilde{I},u\in I' 
+{\rho}_{ru} &= ({\alpha}_r-{\alpha_0}_u + 1)^{-1}({\alpha}_r-{\alpha_0}_u)^{-1} \prod_{k\in \tilde{I},k\neq r} \left(\alpha_r - \alpha_k \right)^{-1}\prod_{k\in
+I} \left(\alpha_r - {\alpha_0}_k - (-1)^{(k)}\right() \\
+& ~\times (-1)^{|I|} \prod_{k\in I,k\neq u} \left({\alpha_0}_u - {\alpha_0}_k -
+(-1)^{(k)}\right)^{-1}\prod_{k\in\tilde{I}} \left(\alpha_k - {\alpha_0}_u \right),\ \ r\in \tilde{I},u\in I' 
 \end{align*}
-Now $({\beta}_r-{\alpha}_u)^{-1}$ will cancel the corresponding term from $\delta_u$ while $
-({\beta}_r-{\alpha}_u + 1)^{-1}$ will only cancel a term in $c_r$ when $u$ is odd. We therefore have
+Now $({\alpha}_r-{\alpha_0}_u)^{-1}$ will cancel the corresponding term from $\delta_u$ while $
+({\alpha}_r-{\alpha_0}_u + 1)^{-1}$ will only cancel a term in $c_r$ when $u$ is odd. We therefore have
 \begin{align*}
-{\rho}_{ru} &= ({\beta}_r-{\alpha}_u + 1)^{-1}\prod_{k\in \tilde{I},k\neq r} \left(\beta_r - \beta_k \right)^{-1}\prod_{k\in
-I} \left(\beta_r - \alpha_k - (-1)^{(k)}\right) \\
-& ~\times (-1)^{|I|} \prod_{k\in I,k\neq u} \left(\alpha_u - \alpha_k -
-(-1)^{(k)}\right)^{-1}\prod_{k\in\tilde{I},k \neq r} \left(\beta_k - \alpha_u \right),\ \ r\in \tilde{I},u\in I' 
+{\rho}_{ru} &= ({\alpha}_r-{\alpha_0}_u + 1)^{-1}\prod_{k\in \tilde{I},k\neq r} \left(\alpha_r - \alpha_k \right)^{-1}\prod_{k\in
+I} \left(\alpha_r - {\alpha_0}_k - (-1)^{(k)}\right) \\
+& ~\times (-1)^{|I|} \prod_{k\in I,k\neq u} \left({\alpha_0}_u - {\alpha_0}_k -
+(-1)^{(k)}\right)^{-1}\prod_{k\in\tilde{I},k \neq r} \left(\alpha_k - {\alpha_0}_u \right),\ \ r\in \tilde{I},u\in I' 
 \end{align*}
 for $u$ even and
 \begin{align*}
 {\rho}_{ru} &= (-1)^{|I|} \prod_{k\in \tilde{I},k\neq r} 
 \left(
 \frac 
-{\beta_k - \alpha_u  }
-{\beta_r - \beta_k }
+{\alpha_k - {\alpha_0}_u  }
+{\alpha_r - \alpha_k }
 \right)
 \prod_{k\in I,k \neq u} 
 \left(
 \frac
-{ \beta_r - \alpha_k - (-1)^{(k)} }
-{\alpha_u - \alpha_k - (-1)^{(k)} }
+{ \alpha_r - {\alpha_0}_k - (-1)^{(k)} }
+{{\alpha_0}_u - {\alpha_0}_k - (-1)^{(k)} }
 \right)
 ,\ \ r\in \tilde{I},u\in I_1
 \end{align*}
@@ -455,24 +455,24 @@ for $u$ odd.
 In the same manner, substituting the expressions for $\bar{c}_r$ and $\bar{\delta}_u$ into equation 
  (\ref{RhoBarExp}) gives
 \begin{align*}
-\bar{\rho}_{ru} &= (\bar{\beta}_r-\bar{\alpha}_u + 1)^{-1}\prod_{k\in \tilde{I'},k\neq r} \left(\bar{\beta}_r - \bar{\beta}_k \right)^{-1}\prod_{k\in
-I'} \left(\bar{\beta}_r - \bar{\alpha}_k - (-1)^{(k)}\right) \\
-& ~\times (-1)^{|I'|} \prod_{k\in I',k\neq u} \left(\bar{\alpha}_u - \bar{\alpha}_k -
-(-1)^{(k)}\right)^{-1}\prod_{k\in\tilde{I'},k \neq r} \left(\bar{\beta}_k - \bar{\alpha}_u \right),\ \ r\in \tilde{I'},u\in I 
+\bar{\rho}_{ru} &= (\bar{\alpha}_r-\bar{\alpha_0}_u + 1)^{-1}\prod_{k\in \tilde{I'},k\neq r} \left(\bar{\alpha}_r - \bar{\alpha}_k \right)^{-1}\prod_{k\in
+I'} \left(\bar{\alpha}_r - \bar{\alpha_0}_k - (-1)^{(k)}\right) \\
+& ~\times (-1)^{|I'|} \prod_{k\in I',k\neq u} \left(\bar{\alpha_0}_u - \bar{\alpha_0}_k -
+(-1)^{(k)}\right)^{-1}\prod_{k\in\tilde{I'},k \neq r} \left(\bar{\alpha}_k - \bar{\alpha_0}_u \right),\ \ r\in \tilde{I'},u\in I 
 \end{align*}
 for $u$ even and
 \begin{align*}
 \bar{\rho}_{ru} &= (-1)^{|I'|} \prod_{k\in \tilde{I'},k\neq r} 
 \left(
 \frac 
-{\bar{\beta}_k - \bar{\alpha}_u  }
-{\bar{\beta}_r - \bar{\beta}_k }
+{\bar{\alpha}_k - \bar{\alpha_0}_u  }
+{\bar{\alpha}_r - \bar{\alpha}_k }
 \right)
 \prod_{k\in I',k \neq u} 
 \left(
 \frac
-{ \bar{\beta}_r - \bar{\alpha}_k - (-1)^{(k)} }
-{\bar{\alpha}_u - \bar{\alpha}_k - (-1)^{(k)} }
+{ \bar{\alpha}_r - \bar{\alpha_0}_k - (-1)^{(k)} }
+{\bar{\alpha_0}_u - \bar{\alpha_0}_k - (-1)^{(k)} }
 \right)
 ,\ \ r\in \tilde{I'},u\in I_1
 \end{align*}
@@ -495,13 +495,13 @@ The expressions for the RWCs of equations (\ref{Schur1}) and (\ref{Schur2}) toge
 &~~\times 
 \left[ 
 \frac{
-(-1)^{|I'|} \prod_{k\in\tilde{I'},k \neq r} \left(\bar{\beta}_k - \bar{\alpha}_u \right)
-\prod_{k\in I'} \left(\bar{\beta}_r - \bar{\alpha}_k - (-1)^{(k)}\right) 
+(-1)^{|I'|} \prod_{k\in\tilde{I'},k \neq r} \left(\bar{\alpha}_k - \bar{\alpha_0}_u \right)
+\prod_{k\in I'} \left(\bar{\alpha}_r - \bar{\alpha_0}_k - (-1)^{(k)}\right) 
 }
 {
-(\bar{\beta}_r-\bar{\alpha}_u + 1)
-\prod_{k\in \tilde{I'},k\neq r} \left(\bar{\beta}_r - \bar{\beta}_k \right)
-\prod_{k\in I',k\neq u} \left(\bar{\alpha}_u - \bar{\alpha}_k - (-1)^{(k)}\right)
+(\bar{\alpha}_r-\bar{\alpha_0}_u + 1)
+\prod_{k\in \tilde{I'},k\neq r} \left(\bar{\alpha}_r - \bar{\alpha}_k \right)
+\prod_{k\in I',k\neq u} \left(\bar{\alpha_0}_u - \bar{\alpha_0}_k - (-1)^{(k)}\right)
 }
 \right]^{1/2}
 , \ \ r\in \tilde{I'},u\in I   \label{FinalBarredEven}
@@ -522,14 +522,14 @@ The expressions for the RWCs of equations (\ref{Schur1}) and (\ref{Schur2}) toge
 &~~\times \left[ (-1)^{|I'|} \prod_{k\in \tilde{I'},k\neq r} 
 \left(
 \frac 
-{\bar{\beta}_k - \bar{\alpha}_u  }
-{\bar{\beta}_r - \bar{\beta}_k }
+{\bar{\alpha}_k - \bar{\alpha_0}_u  }
+{\bar{\alpha}_r - \bar{\alpha}_k }
 \right)
 \prod_{k\in I',k \neq u} 
 \left(
 \frac
-{ \bar{\beta}_r - \bar{\alpha}_k - (-1)^{(k)} }
-{\bar{\alpha}_u - \bar{\alpha}_k - (-1)^{(k)} }
+{ \bar{\alpha}_r - \bar{\alpha_0}_k - (-1)^{(k)} }
+{\bar{\alpha_0}_u - \bar{\alpha_0}_k - (-1)^{(k)} }
 \right)
 \right]^{1/2}
 ,\ \ r\in \tilde{I'},u\in I_1 \label{FinalBarredOdd}
@@ -552,13 +552,13 @@ The expressions for the RWCs of equations (\ref{Schur1}) and (\ref{Schur2}) toge
 \left[
 \frac{
 (-1)^{|I|}
-\prod_{k\in I} \left(\beta_r - \alpha_k - (-1)^{(k)}\right)
-\prod_{k\in\tilde{I},k \neq r} \left(\beta_k - \alpha_u \right)
+\prod_{k\in I} \left(\alpha_r - {\alpha_0}_k - (-1)^{(k)}\right)
+\prod_{k\in\tilde{I},k \neq r} \left(\alpha_k - {\alpha_0}_u \right)
 }
 {
-({\beta}_r-{\alpha}_u + 1)
-\prod_{k\in \tilde{I},k\neq r} \left(\beta_r - \beta_k \right)
-\prod_{k\in I,k\neq u} \left(\alpha_u - \alpha_k - (-1)^{(k)}\right)
+({\alpha}_r-{\alpha}_u + 1)
+\prod_{k\in \tilde{I},k\neq r} \left(\alpha_r - \alpha_k \right)
+\prod_{k\in I,k\neq u} \left({\alpha_0}_u - {\alpha_0}_k - (-1)^{(k)}\right)
 } 
 \right]^{1/2}
 ,\ \ r\in \tilde{I},u\in I' \label{FinalUnBarredEven}
@@ -581,14 +581,14 @@ The expressions for the RWCs of equations (\ref{Schur1}) and (\ref{Schur2}) toge
  (-1)^{|I|} \prod_{k\in \tilde{I},k\neq r} 
 \left(
 \frac 
-{\beta_k - \alpha_u  }
-{\beta_r - \beta_k }
+{\alpha_k - {\alpha_0}_u  }
+{\alpha_r - \alpha_k }
 \right)
 \prod_{k\in I,k \neq u} 
 \left(
 \frac
-{ \beta_r - \alpha_k - (-1)^{(k)} }
-{\alpha_u - \alpha_k - (-1)^{(k)} }
+{ \alpha_r - {\alpha_0}_k - (-1)^{(k)} }
+{{\alpha_0}_u - {\alpha_0}_k - (-1)^{(k)} }
 \right)
 \right]^{1/2}
 ,\ \ r\in \tilde{I},u\in I_1  \label{FinalUnBarredOdd}
@@ -600,14 +600,14 @@ $$
 and where we recall
 
 \begin{align*}
-{\bar{\alpha}}_i &= i - 1 -\Lambda_i  , &1\leq i\leq m-1, \\
-{\bar{\alpha}}_\mu &= \Lambda_\mu + m + 1 - \mu  ,  &1\leq \mu \leq n , \\ 
-{\alpha}_i &= \Lambda_i + m - n - i  , &1\leq i\leq m-1, \\
-{\alpha}_\mu &= \mu - \Lambda_\mu -n, &1\leq \mu \leq n , \\
-\bar{\beta}_i  &= i - 1 -{\tilde{\Lambda}}_i , &1\leq i\leq m, \\
-\bar{\beta}_\mu &= {\tilde{\Lambda}}_\mu + m + 1 - \mu,  &1\leq \mu \leq n + 1, \\
-\beta_i &= {\tilde{\Lambda}}_i + m - n - 1 - i, &1\leq i\leq m, \\
-\beta_\mu &= \mu-{\tilde{\Lambda}}_\mu - n - 1, &1\leq \mu \leq n + 1.  
+{\bar{\alpha_0}}_i &= i - 1 -\Lambda_i  , &1\leq i\leq m-1, \\
+{\bar{\alpha_0}}_\mu &= \Lambda_\mu + m + 1 - \mu  ,  &1\leq \mu \leq n-1 , \\ 
+{\alpha_0}_i &= \Lambda_i + m - n + 1 - i  , &1\leq i\leq m-1, \\
+{\alpha_0}_\mu &= \mu - \Lambda_\mu -n + 1, &1\leq \mu \leq n-1 , \\
+\bar{\alpha}_i  &= i - 1 -{\tilde{\Lambda}}_i , &1\leq i\leq m, \\
+\bar{\alpha}_\mu &= {\tilde{\Lambda}}_\mu + m + 1 - \mu,  &1\leq \mu \leq n , \\
+\alpha_i &= {\tilde{\Lambda}}_i + m - n - i, &1\leq i\leq m, \\
+\alpha_\mu &= \mu-{\tilde{\Lambda}}_\mu - n, &1\leq \mu \leq n .  
 \end{align*}
 
 To guarantee the existence of an orthonormal basis it is essential to utilize equations (\ref{FinalBarredEven}) and (\ref{FinalBarredOdd}) when $\Lambda$ is the highest weight of a type 1 (covariant) unitary module and equations (\ref{FinalUnBarredEven}) and (\ref{FinalUnBarredOdd}) when $\Lambda$ is the highest weight of a type 2 (contravariant) unitary module. It is important and interesting to note that these final equations may still be used to give Wigner coefficients in the mixed tensor case since we have a unique invariant nondegenerate sesquilinear form under which the construction of Wigner coefficients is possible.
