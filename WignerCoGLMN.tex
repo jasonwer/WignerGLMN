@@ -73,6 +73,13 @@ E_{ij}, E_{i\mu}, E_{\mu i}, E_{\mu\nu}.
 $$
 We reserve the indices $p,q$ to be ungraded and to range fully from $1$ to $m+n$.
 
+A weight $\Lambda$ may be expanded in terms
+of the elementary weights $\varepsilon_p$ ($1\leq p\leq m+n$) so that
+\begin{equation*}
+\Lambda = \sum_{p=1}^m\Lambda_p\varepsilon_p 
+\end{equation*}
+where $\epsilon_p$ is the $m+n$-tuple with $1$ in position $p$ and zeros elsewhere.
+
 The adjoint tensor operator $\bar{\mathcal{A}}$ constructed in \cite{GIW1} plays an important role in what follows and is defined as the $m+n$ square matrix with entries
 $$
 \bar{\mathcal{A}}_{pq} = -(-1)^{(p)(q)} E_{qp}.
@@ -132,10 +139,24 @@ c_r = P[r]_{\ m+n}^{m+n}
 \end{align*}
 are essentially squares of reduced Wigner coefficients. 
 
-We note that there is an invariant,
-nondegenerate sesquilinear form on the tensor product space $V(\Lambda) \otimes V(\mu)$ induced by the natural forms on $ V(\Lambda)$ and $V(\mu)$ \cite{GIW1}. This induced form is necessarily unique by Schur's lemma. The restriction of this form to the isotypic component of a given typical submodule is nondegenerate, which allows the definition of Wigner coefficients with respect to the form. Note also, that in the case when $V(\Lambda)$ and $V(\mu)$ both are type 1 unitary or type 2 unitary modules then the induced form gives rise to an inner product. However, when we have a type 1 unitary module tensored with a type 2 unitary module, we may still define Wigner coefficients even though the form induced by the tensor product space is no longer positive definite.
+{\bf Remark 1:} 
+It is important to note that within the $gl(m|n)$ projection operator expressions we may have $\alpha_r = \alpha_k$ for some $r \neq k$. This is related to the occurrence of atypical irreducible representations in the tensor product
+of $V({\varepsilon_1})\otimes V(\Lambda)$ or $V({\varepsilon_1})^*\otimes V(\Lambda)$. The
+set of $\Lambda$ for which this happens, however, is closed in the Zariski topology
+\cite{Hump1972} on $H^*$. It follows that the roots of the characteristic identity are distinct on an open and hence dense subset of
+$H^*$. Hence without loss of generality, we will make the assumption that the roots are distinct. Furthermore, the invariants derived in this paper are given by rational
+polynomial functions which are continuous in the Zariski topology. 
 
-Let $e_i$ denote the Gelfand-Tsetlin (GT) basis states for the vector module $V(\varepsilon_1)$ and ${e^\Lambda_\beta}$ denote the (GT) basis states for the irreducible module $V(\Lambda)$ of highest weight $\Lambda$. Then the matrix elements of $\bar{P}[r]$ can be given in the form
+{\bf Remark 2:} 
+When applying the projection operators we must take care to distinguish between type 1 unitary and type 2 unitary modules. These classes of modules are defined as follows. Consider the positive-definite, invariant, sesquilinear form defined on an irreducible highest weight module $V(\lambda)$ of $gl(m|n)$ 
+$$
+\langle a_{pq} | w \rangle = (-1)^{\epsilon [(p) + (q)]} \langle v | a_{qp} w \rangle , \epsilon  \in \{0,1\}.
+$$
+When $\epsilon = 0$ we call $V(\Lambda)$ a type 1 unitary irrep while for $\epsilon = 1$ we call $V(\Lambda)$ a type 2 unitary irrep. The induced form on a tensor product space $V(\Lambda) \otimes V(\mu)$ is non-degenerate only when restricted to a direct summand of the tensor product space and only when $ V(\Lambda)$ and $V(\mu)$ are of the same type. This induced form is necessarily unique by Schur's lemma. We then define Wigner coefficients with respect to this form. 
+
+Due to these considerations we now consider the type 1 unitary and type 2 unitary cases of Wigner coefficients seperately.
+
+Let $e_i$ denote the Gelfand-Tsetlin (GT) basis states for the (type 1 unitary) vector module $V(\varepsilon_1)$ and ${e^\Lambda_\beta}$ denote the (GT) basis states for the irreducible type 1 unitary module $V(\Lambda)$ of highest weight $\Lambda$. Then the matrix elements of $\bar{P}[r]$ can be given in the form
 \begin{align}
 \left\langle e^\Lambda_\beta | \bar{P}[r]^j_i | e^{\Lambda}_\alpha \right\rangle =
 \sum_\gamma \left\langle e^\Lambda_\beta \otimes e_i | e^{\Lambda + \varepsilon_r}_\gamma \right\rangle
@@ -146,6 +167,8 @@ $$
 \left\langle e^{\Lambda+\varepsilon_r}_\gamma | e_j \otimes e^\Lambda_\alpha \right\rangle,
 $$
 are the vector (fundamental) Wigner coefficients.
+~~\\
+~~\\
 Similarly by denoting $\bar{e}_i$ to be the Gelfand-Tsetlin (GT) basis states of the dual vector module we have 
 \begin{align}
 \left\langle e^\Lambda_\beta | P[r]^j_i | e^{\Lambda}_\alpha \right\rangle =
@@ -157,6 +180,9 @@ $$
 \left\langle e^{\Lambda-\varepsilon_r}_\gamma | \bar{e}_j \otimes e^\Lambda_\alpha \right\rangle,
 $$
 are the dual fundamental Wigner coefficients. The above quantities may be expressed in terms of the $gl(m|n)$ highest weight labels of $\Lambda$ and the highest weight labels of the $gl(m|n-1)$ subalgebra.
+
+We now extend our notation to let $\bar{\varepsilon}_k$ denote the weights of the $gl(m|n)$ contravariant vector irrep. These weights are given by $\bar{\varepsilon}_k = -\varepsilon_{m+n+1-k} (1 \leq k \leq m+n)$. We similarly define the $gl(m|n-1)$ fundamental weights 
+$\varepsilon_{0_{m+n+1-r}} = - \bar{\varepsilon}_{0_r} (1 \leq r \leq m+n-1) $.
 
 From Schur's lemma we observe that the fundamental WCs factorize as follows
 \begin{align}
@@ -258,7 +284,7 @@ and
 \lambda \end{array}
 \right\rangle  , \label{WCBraKet2}
 \end{align}
-where the RWC on the rhs is independent of $[\Lambda_0]$ and $[\Lambda'_0]$ as expected. 
+where the RWC on the rhs reduces to the WC in this case which are independent of $[\Lambda_0]$ and $[\Lambda'_0]$ as expected. 
 The WCs in equations (\ref{WCBraKet1}) and (\ref{WCBraKet2}) are given by the eigenvalues of the invariants
 $$ 
 \bar{c}_r = \bar{P}[r]_{m+n}^{\ m+n}, ~~c_r = P[r]_{\ m+n}^{m+n}
@@ -296,23 +322,24 @@ the squares of the fundamental Wigner coefficients and depend only on the top tw
 
 \section{Reduced Wigner coefficients} 
 \label{Wigner}
-The above derivations may be repeated for the $gl(m|n-1)$ case so that we have tensor operators given by the $m+n-1$ square matrices
+The above derivations may be repeated for the $gl(m|n-1)$ case so that we have the corresponding $(m+n-1) \times (m+n-1)$ square matrices
 $$
 \bar{\mathcal{A}_0}_{pq} = -(-1)^{(p)(q)} E_{qp}, ~~~~~{\mathcal{A}_0}_{pq} = -(-1)^{(p)} E_{pq}.
 $$
-that satisfy the usual polynomial identities 
+that satisfy the usual polynomial identities on an irreducible module with highest weight $\lambda$:
 \begin{align*}
 \prod_{i=1}^m (\bar{\mathcal{A}_0} - \bar{\alpha_0}_i) \prod^{n+1}_{\mu = 1} (\bar{\mathcal{A}_0} - \bar{\alpha_0}_\mu) &= 0 \\
-	\prod^m_{i=1} (\mathcal{A}_0 - {\alpha_0}_i ) \prod^{n+1}_{\mu=1} (\mathcal{A}_0 - {\alpha_0}_\mu) &= 0 
+	\prod^m_{i=1} (\mathcal{A}_0 - {\alpha_0}_i ) \prod^{n+1}_{\mu=1} (\mathcal{A}_0 - {\alpha_0}_\mu) &= 0 .
 \end{align*}
-with roots given by
+Here the roots are given by
 \begin{align*}
 \bar{\alpha_0}_i  &= i - 1 -{\lambda}_i , &1\leq i\leq m, \\
 \bar{\alpha_0}_\mu &= {\lambda}_\mu + m + 1 - \mu,  &1\leq \mu \leq n - 1, \\
 {\alpha_0}_i &= {\lambda}_i + m - n + 1 - i, &1\leq i\leq m, \\
 {\alpha_0}_\mu &= \mu-{\lambda}_\mu - n + 1, &1\leq \mu \leq n - 1.  
 \end{align*}
-Similarly, the $gl(m|n+1)$ projection operators are given by
+
+Similarly, the $gl(m|n-1)$ projection operators are given by
 \begin{align}
 \bar{P_0}[r] = \prod_{k\neq r}^{m+n+1}\left( \frac{\bar{\mathcal{A}_0}  -\bar{\alpha_0}_k}{\bar{\alpha_0}_r - \bar{\alpha_0}_k} \right),
 \ \ 
@@ -325,10 +352,10 @@ The betweenness conditions imply
 \cite{GIW1}, for $1\leq i\leq m$, that we have only two cases
 \begin{align}
 \alpha_i = \left\{ \begin{array}{rl} {\alpha_0}_i,& \Lambda_i = 1+\lambda_i\\
-                                    {\alpha_0}_i - 1,& \Lambda_i = \lambda_i 
+                                    {\alpha_0}_i - 1,& \Lambda_i = \lambda_i  ~~.
 \end{array} \right.
 \nn
-%\label{equ5.4}
+%\label{equ5.4} 
 \end{align}
 We therefore define the following index sets
 \begin{align}
@@ -342,25 +369,27 @@ I'&= \bar{I}_0\cup I_1,\nn\\
 \label{DefIndexSets} 
 \end{align}
 
-By considering the characteristic identities satisfied by the invariants $\bar{\mathcal{A}}$ and $\bar{\mathcal{A}}_0$ we may obtain the invariant $\bar{c}_r$ as a rational polynomial in terms of the roots $\bar{\alpha}_i,\bar{\alpha}_\mu$ and $\bar{\alpha_0}_i,\bar{\alpha_0}_\mu$. Specifically, we have \cite{GIW1}
+By considering the characteristic identities satisfied by the matrices $\bar{\mathcal{A}}$ and $\bar{\mathcal{A}}_0$ we may obtain the invariant $\bar{c}_r$ as a rational polynomial in terms of the roots $\bar{\alpha}_i,\bar{\alpha}_\mu$ and $\bar{\alpha_0}_i,\bar{\alpha_0}_\mu$. Specifically, we have \cite{GIW1}
 \begin{align}
 \bar{c}_r = \prod_{k\in \tilde{I}',k\neq r} \left(\bar{\alpha}_r - \bar{\alpha}_k\right)^{-1}\prod_{k\in
 I'} \left(\bar{\alpha}_r - \bar{\alpha_0}_k - (-1)^{(k)}\right),\ \ r\in \tilde{I}',
+\label{barseer}
 \end{align}
 and
 \begin{align}
 c_r = \prod_{k\in \tilde{I},k\neq r} \left(\alpha_r - \alpha_k \right)^{-1}\prod_{k\in
-I} \left(\alpha_r - {\alpha_0}_k - (-1)^{(k)}\right),\ \ r\in \tilde{I}
+I} \left(\alpha_r - {\alpha_0}_k - (-1)^{(k)}\right),\ \ r\in \tilde{I} .
+\label{seer}
 \end{align}
 
-Note that equations (12) and (13) are positive as expected and serve to determine the Wigner coefficients of equation (\ref{WigCoefCs}).
+Note that equations (\ref{barseer}) and (\ref{seer}) are positive as expected and serve to determine the Wigner coefficients of equation (\ref{WigCoefCs}).
 
-The definitions of the projections $\bar{Q}[r]$ and $\bar{P}[r]$ allow the calculation of the invariant $\bar{\rho}_{ru}$ in the following expressions \cite{GIW2}
+The definitions of the projections $\bar{P_0}[r]$ and $\bar{P}[r]$ allow the calculation of the invariant $\bar{\rho}_{ru}$ in the following expressions \cite{GIW2}
 \begin{align}
 (\bar{P}_0[u]\bar{P}[r]\bar{P}_0[u])_p^{\ q} &= \bar{\rho}_{ru}\bar{P}_0[u]_p^{\ q},\\
-({P_0}[u]{P}[r]{P_0}[u])_p^{\ q} &= {\rho}_{ru}{P_0}[u]_p^{\ q}
+({P_0}[u]{P}[r]{P_0}[u])_p^{\ q} &= {\rho}_{ru}{P_0}[u]_{\ p}^q .
 \end{align}
-where $\bar{\rho}_{ru}$ and ${\rho}_{ru}$ are $gl(m|n-1)$ invariant operators given by
+Explicitly, $\bar{\rho}_{ru}$ and ${\rho}_{ru}$ are $gl(m|n-1)$ invariant operators given by
 \begin{align}
 \bar{\rho}_{ru} &= (\bar{\alpha}_r-\bar{\alpha_0}_u +
 1)^{-1}(\bar{\alpha}_r-\bar{\alpha_0}_u)^{-1}\bar{c}_r\bar{\delta}_u, \ \ \ (u) = 1, \nn\\
@@ -476,11 +505,44 @@ for $u$ even and
 \right)
 ,\ \ r\in \tilde{I'},u\in I_1
 \end{align*}
-for $u$ odd. Note that the expressions for $\rho_{ru}$ and $\bar{\rho}_{ru}$ always evaluate to positive values. 
+for $u$ odd. Note that the expressions for $\rho_{ru}$ and $\bar{\rho}_{ru}$ always evaluate to positive values as expected.
 
 \section{Summary}
 
-The expressions for the RWCs of equations (\ref{Schur1}) and (\ref{Schur2}) together with their phases \cite{GIW2,GIW3} are then given by
+The expressions for the WCs of equations (\ref{WCBraKet1}) and (\ref{WCBraKet2}) together with the RWCs of equations (\ref{Schur1}) and (\ref{Schur2}) including their phases \cite{GIW2,GIW3} are then given by
+\begin{align}
+& \left\langle\left. 
+\begin{array}{c} \Lambda+\varepsilon_r\\ \lambda
+ \end{array}
+\right|\right.
+\left.
+\begin{array}{c} \varepsilon_1 \\ 0 
+ \end{array}
+; \begin{array}{c} \Lambda \\ \lambda
+ \end{array}
+\right\rangle = \left[ \prod_{k\in \tilde{I}',k\neq r} \left(\bar{\alpha}_r - \bar{\alpha}_k\right)^{-1}\prod_{k\in
+I'} \left(\bar{\alpha}_r - \bar{\alpha_0}_k - (-1)^{(k)}\right) \right]^{1/2}
+,\ \ r\in \tilde{I}'
+\end{align}
+
+\begin{align}
+&\left\langle\left. 
+\begin{array}{c} \Lambda-\varepsilon_r\\ \lambda
+ \end{array}
+\right|\right.
+\left.
+\begin{array}{c} \bar{\varepsilon}_1 \\ 0 
+ \end{array}
+; \begin{array}{c} \Lambda \\ \lambda
+ \end{array}
+\right\rangle
+= \left[ \prod_{k\in \tilde{I},k\neq r} \left(\alpha_r - \alpha_k \right)^{-1}\prod_{k\in
+I} \left(\alpha_r - {\alpha_0}_k - (-1)^{(k)}\right) \right]^{1/2}
+,\ \ r\in \tilde{I} .
+\end{align}
+
+
+
 \begin{align}
 & \left\langle\left. 
 \begin{array}{c} \Lambda+\varepsilon_r\\ \lambda+\varepsilon_{0_u} 
@@ -609,8 +671,10 @@ and where we recall
 \alpha_i &= {\tilde{\Lambda}}_i + m - n - i, &1\leq i\leq m, \\
 \alpha_\mu &= \mu-{\tilde{\Lambda}}_\mu - n, &1\leq \mu \leq n .  
 \end{align*}
+Note that the $gl(m|n)$ roots $\alpha$ and $\bar{\alpha}$ are related to the $gl(m|n-1)$ roots $\alpha_0$ and $\bar{\alpha}_0$ by the substitution $n \rightarrow n - 1$.
 
-To guarantee the existence of an orthonormal basis it is essential to utilize equations (\ref{FinalBarredEven}) and (\ref{FinalBarredOdd}) when $\Lambda$ is the highest weight of a type 1 (covariant) unitary module and equations (\ref{FinalUnBarredEven}) and (\ref{FinalUnBarredOdd}) when $\Lambda$ is the highest weight of a type 2 (contravariant) unitary module. It is important and interesting to note that these final equations may still be used to give Wigner coefficients in the mixed tensor case since we have a unique invariant nondegenerate sesquilinear form under which the construction of Wigner coefficients is possible.
+{\bf Final remarks...}
+
 
 
 
@@ -732,6 +796,9 @@ Springer-Verlag (1988) 657.
 % 
 \bibitem{StoiVan2010} N.I. Stoilova and J. Van der Jeugt, J. Math. Phys. {\bf 51} (2010) 093523.
 % 
+\bibitem{Hump1972} J.E. Humphreys, Introduction to Lie algebras and representation theory, volume 9 of Graduate Texts in Mathematics. Springer, New York, 1972.
+
+
 % \bibitem{Molev2011} A.I. Molev, Bull. Inst. Math. Acad. Sinica {\bf 6} (2011) 415.
 % 
 % \bibitem{TolIstSmi1986} V.N. Tolstoy, I.F. Istomina and Yu.F. Smirnov, in ``Group
