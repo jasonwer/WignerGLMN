@@ -167,22 +167,6 @@ $$
 \left\langle e^{\Lambda+\varepsilon_r}_\gamma | e_j \otimes e^\Lambda_\alpha \right\rangle,
 $$
 are the vector (fundamental) Wigner coefficients.
-~~\\
-~~\\
-Similarly by denoting $\bar{e}_i$ to be the Gelfand-Tsetlin (GT) basis states of the dual vector module we have 
-\begin{align}
-\left\langle e^\Lambda_\beta | P[r]^j_i | e^{\Lambda}_\alpha \right\rangle =
-\sum_\gamma \left\langle e^\Lambda_\beta \otimes \bar{e}_i | e^{\Lambda - \varepsilon_r}_\gamma \right\rangle
-\left\langle e^{\Lambda-\varepsilon_r}_\gamma | \bar{e}_j \otimes e^\Lambda_\alpha \right\rangle, \label{Pij}
-\end{align}
-where
-$$
-\left\langle e^{\Lambda-\varepsilon_r}_\gamma | \bar{e}_j \otimes e^\Lambda_\alpha \right\rangle,
-$$
-are the dual fundamental Wigner coefficients. The above quantities may be expressed in terms of the $gl(m|n)$ highest weight labels of $\Lambda$ and the highest weight labels of the $gl(m|n-1)$ subalgebra.
-
-We now extend our notation to let $\bar{\varepsilon}_k$ denote the weights of the $gl(m|n)$ contravariant vector irrep. These weights are given by $\bar{\varepsilon}_k = -\varepsilon_{m+n+1-k} (1 \leq k \leq m+n)$. We similarly define the $gl(m|n-1)$ fundamental weights 
-$\varepsilon_{0_{m+n+1-r}} = - \bar{\varepsilon}_{0_r} (1 \leq r \leq m+n-1) $.
 
 From Schur's lemma we observe that the fundamental WCs factorize as follows
 \begin{align}
@@ -210,7 +194,77 @@ e_i\otimes \begin{array}{c} \Lambda \\ \lambda \\
 e_i\otimes \begin{array}{c} \lambda \\
 {[\Lambda_0]} \end{array}
 \right\rangle,\label{Schur1}\\ 
-~~~ \nn\\
+1 < i < m+n, \nn
+\end{align}
+where $1 < k \leq m+n$,~$1 < r \leq m+n-1$, 
+$\Lambda$ denotes the highest weight of $gl(m|n)$, $\lambda$ denotes the highest weight of $gl(m|n-1)$ and $[\Lambda_0]$ denotes the GT pattern of the $gl(m|n-2)$ subalgebra. In addition, the first term on the rhs of equation (\ref{Schur1}) is a reduced Wigner coeficient (RWC) which is independent of the highest
+weight labels of $[\Lambda_0]$ and $[\Lambda'_0]$.
+
+Setting $i=m+n$ gives
+\begin{align}
+\left\langle\left. 
+\begin{array}{c} \Lambda+\varepsilon_k\\ \lambda \\ {[\Lambda'_0]} \end{array}
+\right|\right.
+\left.
+e_{m+n} \otimes \begin{array}{c} \Lambda \\ \lambda \\
+{[\Lambda_0]} \end{array}
+\right\rangle = \delta_{[\Lambda'_0][\Lambda]}
+ \left\langle\left. 
+\begin{array}{c} \Lambda+\varepsilon_k\\ \lambda \end{array}
+\right|\right.
+\left.
+\begin{array}{c} 
+\varepsilon_1 \\ \dot{0}
+\end{array}
+;
+\begin{array}{c} \Lambda \\ 
+\lambda \end{array}
+\right\rangle  , \label{WCBraKet1}
+\end{align}
+where the RWC on the rhs reduces to the WC in this case which are independent of $[\Lambda_0]$ and $[\Lambda'_0]$ as expected. 
+The WC in equation (\ref{WCBraKet1}) is given by the eigenvalues of the invariant
+$$ 
+\bar{c}_r = \bar{P}[r]_{m+n}^{\ m+n}
+$$
+since from equation (\ref{BarPij}) we have
+
+\begin{align}
+\bar{c}_r  &= \left| \left\langle\left. 
+\begin{array}{c} \Lambda+\varepsilon_r\\ \lambda \end{array}
+\right|\right.
+\left.
+\begin{array}{c} \varepsilon_1 \\
+\dot{0} \end{array} 
+;
+ \begin{array}{c} \Lambda \\
+\lambda \end{array}
+\right\rangle \right|^2, \label{WigCoefCBar}
+\end{align}
+where $\bar{e}_r$ denote the Gelfand-Tsetlin (GT) basis states of the adjoint vector module.
+
+We therefore see that the matrix elements of the projection $\bar{P}[r]_{m+n}^{\ m+n}$ determine
+the squares of the fundamental Wigner coefficients and depend only on the top two rows of the corresponding Gelfand-Tsetlin basis states.
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~\\
+We now turn to the dual fundamental Wigner coefficients and proceed similarly. 
+Denoting $\bar{e}_i$ to be the Gelfand-Tsetlin (GT) basis states of the (type 2 unitary) dual vector module and ${e^\Lambda_\beta}$ to be the (GT) basis states for the irreducible type 2 unitary module $V(\Lambda)$ of highest weight $\Lambda$ we have 
+\begin{align}
+\left\langle e^\Lambda_\beta | P[r]^j_i | e^{\Lambda}_\alpha \right\rangle =
+\sum_\gamma \left\langle e^\Lambda_\beta \otimes \bar{e}_i | e^{\Lambda - \varepsilon_r}_\gamma \right\rangle
+\left\langle e^{\Lambda-\varepsilon_r}_\gamma | \bar{e}_j \otimes e^\Lambda_\alpha \right\rangle, \label{Pij}
+\end{align}
+where
+$$
+\left\langle e^{\Lambda-\varepsilon_r}_\gamma | \bar{e}_j \otimes e^\Lambda_\alpha \right\rangle,
+$$
+are the dual fundamental Wigner coefficients. The above quantities may be expressed in terms of the $gl(m|n)$ highest weight labels of $\Lambda$ and the highest weight labels of the $gl(m|n-1)$ subalgebra.
+
+Let $\bar{\varepsilon}_k$ denote the weights of the $gl(m|n)$ contravariant vector irrep. These weights are given by $\bar{\varepsilon}_k = -\varepsilon_{m+n+1-k} (1 \leq k \leq m+n)$. We similarly define the $gl(m|n-1)$ fundamental weights 
+$\varepsilon_{0_{m+n+1-r}} = - \bar{\varepsilon}_{0_r} (1 \leq r \leq m+n-1) $.
+
+Again, from Schur's lemma we observe that the dual fundamental WCs factorize as follows
+\begin{align}
 \left\langle\left. 
 \begin{array}{c} \Lambda-\varepsilon_k\\ \lambda-\varepsilon_{0_r} \\ {[\Lambda'_0]} \end{array}
 \right|\right.
@@ -239,31 +293,10 @@ e_i\otimes \begin{array}{c} \lambda \\
 1 < i < m+n, \nn
 \end{align}
 where $1 < k \leq m+n$,~$1 < r \leq m+n-1$, 
-$\Lambda$ denotes the highest weight of $gl(m|n)$, $\lambda$ denotes the highest weight of $gl(m|n-1)$ and $[\Lambda_0]$ denotes the GT pattern of the $gl(m|n-2)$ subalgebra. In addition, the first term on the rhs of equations (5) and (6) is a reduced Wigner coeficient (RWC) which is independent of the highest
+$\Lambda$ denotes the highest weight of $gl(m|n)$, $\lambda$ denotes the highest weight of $gl(m|n-1)$ and $[\Lambda_0]$ denotes the GT pattern of the $gl(m|n-2)$ subalgebra. As in the vector Wigner coefficient case, the first term on the rhs of equation (\ref{Schur2}) is a reduced Wigner coeficient (RWC) which is independent of the highest
 weight labels of $[\Lambda_0]$ and $[\Lambda'_0]$.
 
 Setting $i=m+n$ gives
-\begin{align}
-\left\langle\left. 
-\begin{array}{c} \Lambda+\varepsilon_k\\ \lambda \\ {[\Lambda'_0]} \end{array}
-\right|\right.
-\left.
-e_{m+n} \otimes \begin{array}{c} \Lambda \\ \lambda \\
-{[\Lambda_0]} \end{array}
-\right\rangle = \delta_{[\Lambda'_0][\Lambda]}
- \left\langle\left. 
-\begin{array}{c} \Lambda+\varepsilon_k\\ \lambda \end{array}
-\right|\right.
-\left.
-\begin{array}{c} 
-\varepsilon_1 \\ \dot{0}
-\end{array}
-;
-\begin{array}{c} \Lambda \\ 
-\lambda \end{array}
-\right\rangle  , \label{WCBraKet1}
-\end{align}
-and
 \begin{align}
 \left\langle\left. 
 \begin{array}{c} \Lambda-\varepsilon_k\\ \lambda \\ {[\Lambda'_0]} \end{array}
@@ -285,25 +318,12 @@ and
 \right\rangle  , \label{WCBraKet2}
 \end{align}
 where the RWC on the rhs reduces to the WC in this case which are independent of $[\Lambda_0]$ and $[\Lambda'_0]$ as expected. 
-The WCs in equations (\ref{WCBraKet1}) and (\ref{WCBraKet2}) are given by the eigenvalues of the invariants
+The WC in equation (\ref{WCBraKet2}) is given by the eigenvalues of the invariant
 $$ 
-\bar{c}_r = \bar{P}[r]_{m+n}^{\ m+n}, ~~c_r = P[r]_{\ m+n}^{m+n}
+c_r = P[r]_{\ m+n}^{m+n}
 $$
-since from equations (\ref{BarPij}) and (\ref{Pij}) we have
-
-
-
+since from equation (\ref{Pij}) we have
 \begin{align}
-\bar{c}_r  &= \left| \left\langle\left. 
-\begin{array}{c} \Lambda+\varepsilon_r\\ \lambda \end{array}
-\right|\right.
-\left.
-\begin{array}{c} \varepsilon_1 \\
-\dot{0} \end{array} 
-;
- \begin{array}{c} \Lambda \\
-\lambda \end{array}
-\right\rangle \right|^2, \nn\\
 c_r &= \left| \left\langle\left. 
 \begin{array}{c} \Lambda-\varepsilon_r\\ \lambda \end{array}
 \right|\right.
@@ -311,12 +331,12 @@ c_r &= \left| \left\langle\left.
 \begin{array}{c} \bar{\varepsilon}_1 \\
 \dot{0} \end{array}  ; \begin{array}{c} \Lambda \\
 \lambda \end{array}
-\right\rangle \right|^2, \label{WigCoefCs}
+\right\rangle \right|^2, \label{WigCoefCUnbar}
 \end{align}
 where $\bar{e}_r$ denote the Gelfand-Tsetlin (GT) basis states of the adjoint vector module.
 
-We therefore see that the matrix elements of the projections $\bar{P}[r]_{m+n}^{\ m+n}$ and $P[r]_{\ m+n}^{m+n}$ determine
-the squares of the fundamental Wigner coefficients and depend only on the top two rows of the corresponding Gelfand-Tsetlin basis states.
+As in the vector (fundamental) Wigner case we see that the matrix elements of the projection  $P[r]_{\ m+n}^{m+n}$ determine
+the squares of the dual fundamental Wigner coefficients and depend only on the top two rows of the corresponding Gelfand-Tsetlin basis states.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
@@ -382,7 +402,7 @@ I} \left(\alpha_r - {\alpha_0}_k - (-1)^{(k)}\right),\ \ r\in \tilde{I} .
 \label{seer}
 \end{align}
 
-Note that equations (\ref{barseer}) and (\ref{seer}) are positive as expected and serve to determine the Wigner coefficients of equation (\ref{WigCoefCs}).
+Note that equations (\ref{barseer}) and (\ref{seer}) are positive as expected and serve to determine the Wigner coefficients of equation (\ref{WigCoefCUnbar}).
 
 The definitions of the projections $\bar{P_0}[r]$ and $\bar{P}[r]$ allow the calculation of the invariant $\bar{\rho}_{ru}$ in the following expressions \cite{GIW2}
 \begin{align}
