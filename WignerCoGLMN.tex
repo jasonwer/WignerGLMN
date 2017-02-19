@@ -197,7 +197,7 @@ e_i\otimes \begin{array}{c} \lambda \\
 1 < i < m+n, \nn
 \end{align}
 where $1 < k \leq m+n$,~$1 < r \leq m+n-1$, 
-$\Lambda$ denotes the highest weight of $gl(m|n)$, $\lambda$ denotes the highest weight of $gl(m|n-1)$ and $[\Lambda_0]$ denotes the GT pattern of the $gl(m|n-2)$ subalgebra. In addition, the first term on the rhs of equation (\ref{Schur1}) is a reduced Wigner coeficient (RWC) which is independent of the highest
+$\Lambda$ denotes the type 1 unitary highest weight of $gl(m|n)$, $\lambda$ denotes the highest weight of $gl(m|n-1)$ and $[\Lambda_0]$ denotes the GT pattern of the $gl(m|n-2)$ subalgebra. In addition, the first term on the rhs of equation (\ref{Schur1}) is a reduced Wigner coeficient (RWC) which is independent of the highest
 weight labels of $[\Lambda_0]$ and $[\Lambda'_0]$.
 
 Setting $i=m+n$ gives
@@ -227,7 +227,6 @@ $$
 \bar{c}_r = \bar{P}[r]_{m+n}^{\ m+n}
 $$
 since from equation (\ref{BarPij}) we have
-
 \begin{align}
 \bar{c}_r  &= \left| \left\langle\left. 
 \begin{array}{c} \Lambda+\varepsilon_r\\ \lambda \end{array}
@@ -238,9 +237,8 @@ since from equation (\ref{BarPij}) we have
 ;
  \begin{array}{c} \Lambda \\
 \lambda \end{array}
-\right\rangle \right|^2, \label{WigCoefCBar}
+\right\rangle \right|^2. \label{WigCoefCBar}
 \end{align}
-where $\bar{e}_r$ denote the Gelfand-Tsetlin (GT) basis states of the adjoint vector module.
 
 We therefore see that the matrix elements of the projection $\bar{P}[r]_{m+n}^{\ m+n}$ determine
 the squares of the fundamental Wigner coefficients and depend only on the top two rows of the corresponding Gelfand-Tsetlin basis states.
@@ -260,8 +258,8 @@ $$
 $$
 are the dual fundamental Wigner coefficients. The above quantities may be expressed in terms of the $gl(m|n)$ highest weight labels of $\Lambda$ and the highest weight labels of the $gl(m|n-1)$ subalgebra.
 
-Let $\bar{\varepsilon}_k$ denote the weights of the $gl(m|n)$ contravariant vector irrep. These weights are given by $\bar{\varepsilon}_k = -\varepsilon_{m+n+1-k} (1 \leq k \leq m+n)$. We similarly define the $gl(m|n-1)$ fundamental weights 
-$\varepsilon_{0_{m+n+1-r}} = - \bar{\varepsilon}_{0_r} (1 \leq r \leq m+n-1) $.
+Let $\bar{\varepsilon}_k$ denote the weights of the $gl(m|n)$ contravariant vector irrep. These weights are given by $\bar{\varepsilon}_k = -\varepsilon_{m+n+1-k} (1 \leq k \leq m+n)$. We similarly define the $gl(m|n-1)$ fundamental weights $\bar{\varepsilon}_{0_r} =
+\varepsilon_{0_{m+n-r}} = (1 \leq r \leq m+n-1) $.
 
 Again, from Schur's lemma we observe that the dual fundamental WCs factorize as follows
 \begin{align}
@@ -293,7 +291,7 @@ Again, from Schur's lemma we observe that the dual fundamental WCs factorize as 
 1 < i < m+n, \nn
 \end{align}
 where $1 < k \leq m+n$,~$1 < r \leq m+n-1$, 
-$\Lambda$ denotes the highest weight of $gl(m|n)$, $\lambda$ denotes the highest weight of $gl(m|n-1)$ and $[\Lambda_0]$ denotes the GT pattern of the $gl(m|n-2)$ subalgebra. As in the vector Wigner coefficient case, the first term on the rhs of equation (\ref{Schur2}) is a reduced Wigner coeficient (RWC) which is independent of the highest
+$\Lambda$ denotes the type 2 unitary highest weight of $gl(m|n)$, $\lambda$ denotes the highest weight of $gl(m|n-1)$ and $[\Lambda_0]$ denotes the GT pattern of the $gl(m|n-2)$ subalgebra. As in the vector Wigner coefficient case, the first term on the rhs of equation (\ref{Schur2}) is a reduced Wigner coeficient (RWC) which is independent of the highest
 weight labels of $[\Lambda_0]$ and $[\Lambda'_0]$.
 
 Setting $i=m+n$ gives
@@ -331,85 +329,67 @@ c_r &= \left| \left\langle\left.
 \begin{array}{c} \bar{\varepsilon}_1 \\
 \dot{0} \end{array}  ; \begin{array}{c} \Lambda \\
 \lambda \end{array}
-\right\rangle \right|^2, \label{WigCoefCUnbar}
+\right\rangle \right|^2. \label{WigCoefCUnbar}
 \end{align}
-where $\bar{e}_r$ denote the Gelfand-Tsetlin (GT) basis states of the adjoint vector module.
-
-As in the vector (fundamental) Wigner case we see that the matrix elements of the projection  $P[r]_{\ m+n}^{m+n}$ determine
+As in the vector fundamental Wigner case we see that the matrix elements of the projection  $P[r]_{\ m+n}^{m+n}$ determine
 the squares of the dual fundamental Wigner coefficients and depend only on the top two rows of the corresponding Gelfand-Tsetlin basis states.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \section{Reduced Wigner coefficients} 
 \label{Wigner}
-The above derivations may be repeated for the $gl(m|n-1)$ case so that we have the corresponding $(m+n-1) \times (m+n-1)$ square matrices
+We now define the $gl(m|n-1)$ analogue of the matrix $\bar{\mathcal{A}}_{pq}$ so that we have the corresponding $(m+n-1) \times (m+n-1)$ square matrix
 $$
-\bar{\mathcal{A}_0}_{pq} = -(-1)^{(p)(q)} E_{qp}, ~~~~~{\mathcal{A}_0}_{pq} = -(-1)^{(p)} E_{pq}.
+\bar{\mathcal{A}_0}_{pq} = -(-1)^{(p)(q)} E_{qp}
 $$
-that satisfy the usual polynomial identities on an irreducible module with highest weight $\lambda$:
+that satisfies the usual polynomial identities on an irreducible type 1 unitary module with highest weight $\lambda$:
 \begin{align*}
-\prod_{i=1}^m (\bar{\mathcal{A}_0} - \bar{\alpha_0}_i) \prod^{n+1}_{\mu = 1} (\bar{\mathcal{A}_0} - \bar{\alpha_0}_\mu) &= 0 \\
-	\prod^m_{i=1} (\mathcal{A}_0 - {\alpha_0}_i ) \prod^{n+1}_{\mu=1} (\mathcal{A}_0 - {\alpha_0}_\mu) &= 0 .
+\prod_{i=1}^m (\bar{\mathcal{A}_0} - \bar{\alpha_0}_i) \prod^{n+1}_{\mu = 1} (\bar{\mathcal{A}_0} - \bar{\alpha_0}_\mu) &= 0.
 \end{align*}
 Here the roots are given by
 \begin{align*}
 \bar{\alpha_0}_i  &= i - 1 -{\lambda}_i , &1\leq i\leq m, \\
-\bar{\alpha_0}_\mu &= {\lambda}_\mu + m + 1 - \mu,  &1\leq \mu \leq n - 1, \\
-{\alpha_0}_i &= {\lambda}_i + m - n + 1 - i, &1\leq i\leq m, \\
-{\alpha_0}_\mu &= \mu-{\lambda}_\mu - n + 1, &1\leq \mu \leq n - 1.  
+\bar{\alpha_0}_\mu &= {\lambda}_\mu + m + 1 - \mu,  &1\leq \mu \leq n - 1,
 \end{align*}
-
-Similarly, the $gl(m|n-1)$ projection operators are given by
+and the $gl(m|n-1)$ projection operators are given by
 \begin{align}
-\bar{P_0}[r] = \prod_{k\neq r}^{m+n+1}\left( \frac{\bar{\mathcal{A}_0}  -\bar{\alpha_0}_k}{\bar{\alpha_0}_r - \bar{\alpha_0}_k} \right),
-\ \ 
-P_0[r] = \prod_{k\neq r}^{m+n+1}\left( 
-\frac{\mathcal{A}_0-{\alpha_0}_k}
-{{\alpha_0}_r-{\alpha_0}_k} \right),
+\bar{P_0}[r] = \prod_{k\neq r}^{m+n+1}\left( \frac{\bar{\mathcal{A}_0}  -\bar{\alpha_0}_k}{\bar{\alpha_0}_r - \bar{\alpha_0}_k} \right).
 \end{align}
-
 The betweenness conditions imply 
 \cite{GIW1}, for $1\leq i\leq m$, that we have only two cases
 \begin{align}
-\alpha_i = \left\{ \begin{array}{rl} {\alpha_0}_i,& \Lambda_i = 1+\lambda_i\\
-                                    {\alpha_0}_i - 1,& \Lambda_i = \lambda_i  ~~.
+\bar{\alpha}_i = \left\{ \begin{array}{rl}  \bar{\alpha_0}_i - 1,& \Lambda_i = 1+\lambda_i\\
+                                    \bar{\alpha_0}_i,& \Lambda_i = \lambda_i  ~~.
 \end{array} \right.
 \nn
 %\label{equ5.4} 
 \end{align}
 We therefore define the following index sets
 \begin{align}
-I_0 &=  \{ 1\leq i\leq m\ |\ {\alpha_0}_i=\alpha_i\},\nn\\
-\bar{I}_0 &=  \{ 1\leq i\leq m\ |\ {\alpha_0}_i=1+\alpha_i\},\nn\\
+I_0 &=  \{ 1\leq i\leq m\ |\ \bar{\alpha_0}_i=1+\bar{\alpha}_i \},\nn\\
+\bar{I}_0 &=  \{ 1\leq i\leq m\ |\ \bar{\alpha_0}_i=\bar{\alpha}_i  \},\nn\\
 I_1 &= \{ 1\leq\mu\leq n-1\},\nn\\
 I &= I_0\cup I_1,\nn\\
 I'&= \bar{I}_0\cup I_1,\nn\\
 \tilde{I} &= I\cup \{m+n\},\nn\\
 \tilde{I}' &= I'\cup \{m+n\}.
-\label{DefIndexSets} 
+\label{DefIndexSets1} 
 \end{align}
 
-By considering the characteristic identities satisfied by the matrices $\bar{\mathcal{A}}$ and $\bar{\mathcal{A}}_0$ we may obtain the invariant $\bar{c}_r$ as a rational polynomial in terms of the roots $\bar{\alpha}_i,\bar{\alpha}_\mu$ and $\bar{\alpha_0}_i,\bar{\alpha_0}_\mu$. Specifically, we have \cite{GIW1}
+By considering the characteristic identities satisfied by the matrix $\bar{\mathcal{A}}$ we may obtain the invariant $\bar{c}_r$ as a rational polynomial in terms of the roots $\bar{\alpha}_i$ and $\bar{\alpha}_\mu$. Specifically, we have \cite{GIW1}
 \begin{align}
 \bar{c}_r = \prod_{k\in \tilde{I}',k\neq r} \left(\bar{\alpha}_r - \bar{\alpha}_k\right)^{-1}\prod_{k\in
 I'} \left(\bar{\alpha}_r - \bar{\alpha_0}_k - (-1)^{(k)}\right),\ \ r\in \tilde{I}',
 \label{barseer}
 \end{align}
-and
-\begin{align}
-c_r = \prod_{k\in \tilde{I},k\neq r} \left(\alpha_r - \alpha_k \right)^{-1}\prod_{k\in
-I} \left(\alpha_r - {\alpha_0}_k - (-1)^{(k)}\right),\ \ r\in \tilde{I} .
-\label{seer}
-\end{align}
 
-Note that equations (\ref{barseer}) and (\ref{seer}) are positive as expected and serve to determine the Wigner coefficients of equation (\ref{WigCoefCUnbar}).
+Note that equation (\ref{barseer}) is positive as expected and serves to determine the Wigner coefficients of equation (\ref{WigCoefCBar}).
 
-The definitions of the projections $\bar{P_0}[r]$ and $\bar{P}[r]$ allow the calculation of the invariant $\bar{\rho}_{ru}$ in the following expressions \cite{GIW2}
+The definition of the projection $\bar{P_0}[r]$ allows the calculation of the invariant $\bar{\rho}_{ru}$ in the following expressions \cite{GIW2}
 \begin{align}
-(\bar{P}_0[u]\bar{P}[r]\bar{P}_0[u])_p^{\ q} &= \bar{\rho}_{ru}\bar{P}_0[u]_p^{\ q},\\
-({P_0}[u]{P}[r]{P_0}[u])_p^{\ q} &= {\rho}_{ru}{P_0}[u]_{\ p}^q .
+(\bar{P}_0[u]\bar{P}[r]\bar{P}_0[u])_p^{\ q} &= \bar{\rho}_{ru}\bar{P}_0[u]_p^{\ q}.
 \end{align}
-Explicitly, $\bar{\rho}_{ru}$ and ${\rho}_{ru}$ are $gl(m|n-1)$ invariant operators given by
+Explicitly, $\bar{\rho}_{ru}$ is the $gl(m|n-1)$ invariant operator given by
 \begin{align}
 \bar{\rho}_{ru} &= (\bar{\alpha}_r-\bar{\alpha_0}_u +
 1)^{-1}(\bar{\alpha}_r-\bar{\alpha_0}_u)^{-1}\bar{c}_r\bar{\delta}_u, \ \ \ (u) = 1, \nn\\
@@ -421,19 +401,6 @@ Explicitly, $\bar{\rho}_{ru}$ and ${\rho}_{ru}$ are $gl(m|n-1)$ invariant operat
 1)^{-1}(\bar{\alpha}_r-\bar{\alpha_0}_u)^{-1}\bar{c}_r \bar{\delta}_u \ \ \ gl(m)
 \hbox{~case,} 
 \label{RhoBarExp}
-\end{align}
-and
-\begin{align}
-{\rho}_{ru} &= ({\alpha}_r-{\alpha_0}_u +
-1)^{-1}({\alpha}_r-{\alpha_0}_u)^{-1}{c}_r{\delta}_u, \ \ \ (u) = 1, \nn\\
-{\rho}_{ru} &= ({\alpha}_r-{\alpha_0}_u +
-1)^{-1}({\alpha}_r-{\alpha_0}_u)^{-1}{c}_r{\delta}_u \ \ \ (u) = 0, u \neq r,
-\nn\\
-{\rho}_{uu} &= {c}_u {\delta}_u, \ \ \ (u) = 0, \nn\\
-{\rho}_{ru} &= ({\alpha}_r-{\alpha_0}_u -
-1)^{-1}({\alpha}_r-{\alpha_0}_u)^{-1}{c}_r {\delta}_u \ \ \ gl(m)
-\hbox{~case,} 
-\label{RhoExp}
 \end{align}
 whose eigenvalues determine the square of $gl(m|n):gl(m|n-1)$ reduced vector Wigner
 coefficients via
@@ -447,7 +414,118 @@ coefficients via
 ;
  \begin{array}{c} \Lambda \\
 \lambda \end{array}
-\right\rangle \right|^2, \\
+\right\rangle \right|^2,
+\end{align}
+and where
+\begin{align}
+\bar{\delta}_u &= (-1)^{|I'|} \prod_{k\in I',k\neq u}\left(\bar{\alpha_0}_u - \bar{\alpha_0}_k -
+(-1)^{(s)}\right)^{-1} \prod_{k\in \tilde{I}'}\left(\bar{\alpha}_k - \bar{\alpha_0}_u \right), u\in I, 
+\end{align}
+are the reduced matrix elements.
+Note that $\bar{\rho}_{ru}$ in equation (\ref{RhoBarExp}) is non-vanishing only when $r\in \tilde{I}'$ and $u\in I$.
+
+Substituting the expressions for $\bar{c}_r$ and $\bar{\delta}_u$ into equation 
+ (\ref{RhoBarExp}) gives
+\begin{align*}
+\bar{\rho}_{ru} &= (\bar{\alpha}_r-\bar{\alpha_0}_u + 1)^{-1}\prod_{k\in \tilde{I'},k\neq r} \left(\bar{\alpha}_r - \bar{\alpha}_k \right)^{-1}\prod_{k\in
+I'} \left(\bar{\alpha}_r - \bar{\alpha_0}_k - (-1)^{(k)}\right) \\
+& ~\times (-1)^{|I'|} \prod_{k\in I',k\neq u} \left(\bar{\alpha_0}_u - \bar{\alpha_0}_k -
+(-1)^{(k)}\right)^{-1}\prod_{k\in\tilde{I'},k \neq r} \left(\bar{\alpha}_k - \bar{\alpha_0}_u \right),\ \ r\in \tilde{I'},u\in I 
+\end{align*}
+for $u$ even and
+\begin{align*}
+\bar{\rho}_{ru} &= (-1)^{|I'|} \prod_{k\in \tilde{I'},k\neq r} 
+\left(
+\frac 
+{\bar{\alpha}_k - \bar{\alpha_0}_u  }
+{\bar{\alpha}_r - \bar{\alpha}_k }
+\right)
+\prod_{k\in I',k \neq u} 
+\left(
+\frac
+{ \bar{\alpha}_r - \bar{\alpha_0}_k - (-1)^{(k)} }
+{\bar{\alpha_0}_u - \bar{\alpha_0}_k - (-1)^{(k)} }
+\right)
+,\ \ r\in \tilde{I'},u\in I_1
+\end{align*}
+for $u$ odd. Note that the expressions for $\bar{\rho}_{ru}$ always evaluate to positive values as expected.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+~~\\
+We now turn to the calculation of the dual vector Wigner coefficients.
+The notion of a dual vector Wigner coefficient is defined via the use of symmetry relations and Schur's lemma. Details are given in Appendix A.
+
+~~\\
+The $gl(m|n-1)$ analogue of ${\mathcal{A}}_{pq}$ is the $(m+n-1) \times (m+n-1)$ square matrix
+$$
+{\mathcal{A}_0}_{pq} = -(-1)^{(p)} E_{pq}
+$$
+that satisfies the usual polynomial identities on an irreducible type 2 unitary module with highest weight $\lambda$ is
+\begin{align*}
+	\prod^m_{i=1} (\mathcal{A}_0 - {\alpha_0}_i ) \prod^{n+1}_{\mu=1} (\mathcal{A}_0 - {\alpha_0}_\mu) &= 0 .
+\end{align*}
+Here the roots are given by
+\begin{align*}
+{\alpha_0}_i &= {\lambda}_i + m - n + 1 - i, &1\leq i\leq m, \\
+{\alpha_0}_\mu &= \mu-{\lambda}_\mu - n + 1, &1\leq \mu \leq n - 1 
+\end{align*}
+and the dual $gl(m|n-1)$ projection operators are expressed as
+\begin{align}
+P_0[r] = \prod_{k\neq r}^{m+n+1}\left( 
+\frac{\mathcal{A}_0-{\alpha_0}_k}
+{{\alpha_0}_r-{\alpha_0}_k} \right).
+\end{align}
+The betweenness conditions imply 
+\cite{GIW3}, for $1\leq i\leq m$, that we have only two cases
+\begin{align}
+\alpha_i = \left\{ \begin{array}{rl} {\alpha_0}_i,& \Lambda_i = 1+\lambda_i\\
+                                    {\alpha_0}_i - 1,& \Lambda_i = \lambda_i  ~~.
+\end{array} \right.
+\nn
+%\label{equ5.4} 
+\end{align}
+The index sets in terms of the adjoint roots $\alpha_i$ and ${\alpha_0}_i$ are then
+\begin{align}
+I_0 &=  \{ 1\leq i\leq m\ |\ {\alpha_0}_i=\alpha_i\},\nn\\
+\bar{I}_0 &=  \{ 1\leq i\leq m\ |\ {\alpha_0}_i=1+\alpha_i\},\nn\\
+I_1 &= \{ 1\leq\mu\leq n-1\},\nn\\
+I &= I_0\cup I_1,\nn\\
+I'&= \bar{I}_0\cup I_1,\nn\\
+\tilde{I} &= I\cup \{m+n\},\nn\\
+\tilde{I}' &= I'\cup \{m+n\}.
+\label{DefIndexSets2} 
+\end{align}
+
+By considering the characteristic identities satisfied by the matrix $\bar{\mathcal{A}}$ we may obtain the invariant $c_r$ as a rational polynomial in terms of the roots $\alpha_i,\alpha_\mu$ and ${\alpha_0}_i,{\alpha_0}_\mu$. Specifically, we have \cite{GIW1}
+\begin{align}
+c_r = \prod_{k\in \tilde{I},k\neq r} \left(\alpha_r - \alpha_k \right)^{-1}\prod_{k\in
+I} \left(\alpha_r - {\alpha_0}_k - (-1)^{(k)}\right),\ \ r\in \tilde{I} .
+\label{seer}
+\end{align}
+
+We also note that equation (\ref{seer}) is positive (as expected) and serves to determine the Wigner coefficients of equation (\ref{WigCoefCUnbar}).
+
+The definitions of the projections ${P_0}[r]$ and ${P}[r]$ allow the calculation of the invariant ${\rho}_{ru}$ in the following expressions \cite{GIW2}
+\begin{align}
+({P_0}[u]{P}[r]{P_0}[u])_p^{\ q} &= {\rho}_{ru}{P_0}[u]_{\ p}^q 
+\end{align}
+where ${\rho}_{ru}$ are the $gl(m|n-1)$ invariant operators given by
+\begin{align}
+{\rho}_{ru} &= ({\alpha}_r-{\alpha_0}_u +
+1)^{-1}({\alpha}_r-{\alpha_0}_u)^{-1}{c}_r{\delta}_u, \ \ \ (u) = 1, \nn\\
+{\rho}_{ru} &= ({\alpha}_r-{\alpha_0}_u +
+1)^{-1}({\alpha}_r-{\alpha_0}_u)^{-1}{c}_r{\delta}_u \ \ \ (u) = 0, u \neq r,
+\nn\\
+{\rho}_{uu} &= {c}_u {\delta}_u, \ \ \ (u) = 0, \nn\\
+{\rho}_{ru} &= ({\alpha}_r-{\alpha_0}_u -
+1)^{-1}({\alpha}_r-{\alpha_0}_u)^{-1}{c}_r {\delta}_u \ \ \ gl(m)
+\hbox{~case,} 
+\label{RhoExp}
+\end{align}
+whose eigenvalues determine the square of $gl(m|n):gl(m|n-1)$ reduced dual vector Wigner
+coefficients via
+\begin{align}
 \rho_{ru} &= \left| \left\langle\left. 
 \begin{array}{c} \Lambda-\varepsilon_r\\ \lambda-\varepsilon_{0_u} \end{array}
 \right|\right.
@@ -459,13 +537,11 @@ coefficients via
 \end{align}
 and where
 \begin{align}
-\bar{\delta}_u &= (-1)^{|I'|} \prod_{k\in I',k\neq u}\left(\bar{\alpha_0}_u - \bar{\alpha_0}_k -
-(-1)^{(s)}\right)^{-1} \prod_{k\in \tilde{I}'}\left(\bar{\alpha}_k - \bar{\alpha_0}_u \right), u\in I, \\
 \delta_u &= (-1)^{|I|} \prod_{k\in I,k\neq u} \left({\alpha_0}_u - {\alpha_0}_k -
 (-1)^{(k)}\right)^{-1}\prod_{k\in\tilde{I}} \left(\alpha_k - {\alpha_0}_u \right),\ \ u\in I',
 \end{align}
 are the reduced matrix elements.
-Note that $\bar{\rho}_{ru}$ in equation (\ref{RhoBarExp}) is non-vanishing only when $r\in \tilde{I}'$ and $u\in I$ while ${\rho}_{ru}$ in equation (\ref{RhoExp}) is non-vanishing only when $r\in \tilde{I}$ and $u\in I'$.
+Note that ${\rho}_{ru}$ in equation (\ref{RhoExp}) is non-vanishing only when $r\in \tilde{I}$ and $u\in I'$.
 
 Substituting the expressions for ${c}_r$ and ${\delta}_u$ into equation 
  (\ref{RhoExp}) initially gives
@@ -500,35 +576,9 @@ for $u$ even and
 ,\ \ r\in \tilde{I},u\in I_1
 \end{align*}
 for $u$ odd.
-
-In the same manner, substituting the expressions for $\bar{c}_r$ and $\bar{\delta}_u$ into equation 
- (\ref{RhoBarExp}) gives
-\begin{align*}
-\bar{\rho}_{ru} &= (\bar{\alpha}_r-\bar{\alpha_0}_u + 1)^{-1}\prod_{k\in \tilde{I'},k\neq r} \left(\bar{\alpha}_r - \bar{\alpha}_k \right)^{-1}\prod_{k\in
-I'} \left(\bar{\alpha}_r - \bar{\alpha_0}_k - (-1)^{(k)}\right) \\
-& ~\times (-1)^{|I'|} \prod_{k\in I',k\neq u} \left(\bar{\alpha_0}_u - \bar{\alpha_0}_k -
-(-1)^{(k)}\right)^{-1}\prod_{k\in\tilde{I'},k \neq r} \left(\bar{\alpha}_k - \bar{\alpha_0}_u \right),\ \ r\in \tilde{I'},u\in I 
-\end{align*}
-for $u$ even and
-\begin{align*}
-\bar{\rho}_{ru} &= (-1)^{|I'|} \prod_{k\in \tilde{I'},k\neq r} 
-\left(
-\frac 
-{\bar{\alpha}_k - \bar{\alpha_0}_u  }
-{\bar{\alpha}_r - \bar{\alpha}_k }
-\right)
-\prod_{k\in I',k \neq u} 
-\left(
-\frac
-{ \bar{\alpha}_r - \bar{\alpha_0}_k - (-1)^{(k)} }
-{\bar{\alpha_0}_u - \bar{\alpha_0}_k - (-1)^{(k)} }
-\right)
-,\ \ r\in \tilde{I'},u\in I_1
-\end{align*}
-for $u$ odd. Note that the expressions for $\rho_{ru}$ and $\bar{\rho}_{ru}$ always evaluate to positive values as expected.
+Note that the expression for $\rho_{ru}$ always evaluates to a positive value as expected.
 
 \section{Summary}
-
 The expressions for the WCs of equations (\ref{WCBraKet1}) and (\ref{WCBraKet2}) together with the RWCs of equations (\ref{Schur1}) and (\ref{Schur2}) including their phases \cite{GIW2,GIW3} are then given by
 \begin{align}
 & \left\langle\left. 
@@ -693,7 +743,7 @@ and where we recall
 \end{align*}
 Note that the $gl(m|n)$ roots $\alpha$ and $\bar{\alpha}$ are related to the $gl(m|n-1)$ roots $\alpha_0$ and $\bar{\alpha}_0$ by the substitution $n \rightarrow n - 1$.
 
-{\bf Final remarks...}
+{\bf Final remark...}
 
 
 
