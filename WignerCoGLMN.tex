@@ -102,10 +102,11 @@ Immediately from the characteristic identity, we see that for each integer $r$ w
 %\bar{P}[r]: V(\varepsilon_1) \otimes V(\Lambda) \longrightarrow V(\Lambda + \epsilon_r)
 %$$
 %given by
-\begin{align*}
+\begin{align}
+\label{proj_bar}
 \bar{P}[r] = \prod^{m+n}_{k \neq r} \left( \frac{{\cal \bar{A}} - \bar{\alpha}_k}{\bar{\alpha}_r
-- \bar{\alpha}_k} \right)\nn.
-\end{align*}
+- \bar{\alpha}_k} \right).
+\end{align}
 Similarly we have the vector matrix $\mathcal{A}$ with entries
 $$
 \mathcal{A}_{pq} = -(-1)^{(p)} E_{pq}.
@@ -124,10 +125,11 @@ The associated projection operators
 %P[r]: V^*(\varepsilon_1) \otimes V(\Lambda) \longrightarrow V(\Lambda - \epsilon_r)
 %$$
 are then given by
-\begin{align*}
+\begin{align}
 P[r] = \prod^{m+n}_{k \neq r} \left( \frac{{\cal A} - \alpha_k}{\alpha_r
-- \alpha_k} \right)\nn.
-\end{align*}
+- \alpha_k} \right).
+\label{proj_unbar}
+\end{align}
 %We will now apply the characteristic identities (\ref{CharIdent1}) and (\ref{CharIdent2}) to evaluate the operators
 %\begin{align*}
 %\bar{c}_r = \bar{P}[r]_{m+n}^{\ m+n}
@@ -393,8 +395,11 @@ Note that the expression for $\rho_{ru}$ always evaluates to a positive value as
 \section{Reduced Wigner coefficients} 
 \label{Wigner}
 
+We will now show that the eigenvalues of the invariants $\bar{c}_r$ and $c[r]$ are 
+essentially squares of reduced Wigner coefficients. Before proceeding we must make the following remarks:
+
 {\bf Remark 1:} 
-It is important to note that within the $gl(m|n)$ projection operator expressions we may have $\alpha_r = \alpha_k$ for some $r \neq k$. This is related to the occurrence of atypical irreducible representations in the tensor product
+It is important to note that within the $gl(m|n)$ projection operator expressions (\ref{proj_bar}) and (\ref{proj_unbar}) we may have $\alpha_r = \alpha_k$ or $\bar{\alpha}_r = \bar{\alpha}_k$ for some $r \neq k$. This is related to the occurrence of atypical irreducible representations in the tensor product
 of $V({\varepsilon_1})\otimes V(\Lambda)$ or $V({\varepsilon_1})^*\otimes V(\Lambda)$. The
 set of $\Lambda$ for which this happens, however, is closed in the Zariski topology
 \cite{Hump1972} on $H^*$. It follows that the roots of the characteristic identity are distinct on an open and hence dense subset of
@@ -406,9 +411,14 @@ When applying the projection operators we must take care to distinguish between 
 $$
 \langle a_{pq} | w \rangle = (-1)^{\epsilon [(p) + (q)]} \langle v | a_{qp} w \rangle , \epsilon  \in \{0,1\}.
 $$
-When $\epsilon = 0$ we call $V(\Lambda)$ a type 1 unitary irrep while for $\epsilon = 1$ we call $V(\Lambda)$ a type 2 unitary irrep. The induced form on a tensor product space $V(\Lambda) \otimes V(\mu)$ is non-degenerate only when restricted to a direct summand of the tensor product space and only when $ V(\Lambda)$ and $V(\mu)$ are of the same type. This induced form is necessarily unique by Schur's lemma. We then define Wigner coefficients with respect to this form. 
+When $\epsilon = 0$ we call $V(\Lambda)$ a type 1 unitary irrep while for $\epsilon = 1$ we call $V(\Lambda)$ a type 2 unitary irrep. The induced form on a tensor product space $V(\Lambda) \otimes V(\mu)$ is non-degenerate only when restricted to a direct summand of the tensor product space and only when $ V(\Lambda)$ and $V(\mu)$ are of the same type. We then define Wigner coefficients with respect to this form. 
+
+{\bf Remark 3:}
+The algebraic symmetry of the invariants $\rho$ and $\bar{\rho}$ in the case of Lie algebras is reminicent of the well known symmetry of Wigner coefficients. In our superalgebra case, complexities arise... 
 
 Due to these considerations we now consider the type 1 unitary and type 2 unitary cases of Wigner coefficients seperately.
+
+\subsection{Covariant vector Wigner coefficients}
 
 Let $e_i$ denote the Gelfand-Tsetlin (GT) basis states for the (type 1 unitary) vector module $V(\varepsilon_1)$ and ${e^\Lambda_\beta}$ denote the (GT) basis states for the irreducible type 1 unitary module $V(\Lambda)$ of highest weight $\Lambda$. Then the matrix elements of $\bar{P}[r]$ can be given in the form
 \begin{align}
@@ -497,8 +507,103 @@ since from equation (\ref{BarPij}) we have
 We therefore see that the matrix elements of the projection $\bar{P}[r]_{m+n}^{\ m+n}$ determine
 the squares of the fundamental Wigner coefficients and depend only on the top two rows of the corresponding Gelfand-Tsetlin basis states.
 
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-~~\\
+Furthermore, the eigenvalues of the invariant $\bar{\rho}_{ru}$ determine the square of $gl(m|n):gl(m|n-1)$ covariant vector RWCs \cite{GIW2} since 
+\begin{align}
+\bar{\rho}_{ru}  &= \left| \left\langle\left. 
+\begin{array}{c} \Lambda+\varepsilon_r\\ \lambda+\varepsilon_{0_u} \end{array}
+\right|\right.
+\left.
+\begin{array}{c} \varepsilon_1 \\
+\varepsilon_{0_1} \end{array} 
+;
+ \begin{array}{c} \Lambda \\
+\lambda \end{array}
+\right\rangle \right|^2.
+\end{align}
+
+The expressions for the WCs of equation (\ref{WCBraKet1}) together with the RWCs of equation (\ref{Schur1}) including their phases \cite{GIW2} are then given by
+\begin{align}
+& \left\langle\left. 
+\begin{array}{c} \Lambda+\varepsilon_r\\ \lambda
+ \end{array}
+\right|\right.
+\left.
+\begin{array}{c} \varepsilon_1 \\ 0 
+ \end{array}
+; \begin{array}{c} \Lambda \\ \lambda
+ \end{array}
+\right\rangle = \left[ \prod_{k\in \tilde{I}',k\neq r} \left(\bar{\alpha}_r - \bar{\alpha}_k\right)^{-1}\prod_{k\in
+I'} \left(\bar{\alpha}_r - \bar{\alpha_0}_k - (-1)^{(k)}\right) \right]^{1/2}
+,\ \ r\in \tilde{I}'
+\end{align}
+
+\begin{align}
+& \left\langle\left. 
+\begin{array}{c} \Lambda+\varepsilon_r\\ \lambda+\varepsilon_{0_u} 
+ \end{array}
+\right|\right.
+\left.
+\begin{array}{c} \varepsilon_1 \\ \varepsilon_{0_1} 
+ \end{array}
+; \begin{array}{c} \Lambda \\ \lambda
+ \end{array}
+\right\rangle = (-1)^{(r)(u)} S(r-u) \nn\\
+&~~\times 
+\left[ 
+\frac{
+(-1)^{|I'|} \prod_{k\in\tilde{I'},k \neq r} \left(\bar{\alpha}_k - \bar{\alpha_0}_u \right)
+\prod_{k\in I'} \left(\bar{\alpha}_r - \bar{\alpha_0}_k - (-1)^{(k)}\right) 
+}
+{
+(\bar{\alpha}_r-\bar{\alpha_0}_u + 1)
+\prod_{k\in \tilde{I'},k\neq r} \left(\bar{\alpha}_r - \bar{\alpha}_k \right)
+\prod_{k\in I',k\neq u} \left(\bar{\alpha_0}_u - \bar{\alpha_0}_k - (-1)^{(k)}\right)
+}
+\right]^{1/2}
+, \ \ r\in \tilde{I'},u\in I   \label{FinalBarredEven}
+\end{align}
+
+
+\begin{align}
+& \left\langle\left. 
+\begin{array}{c} \Lambda+\varepsilon_r\\ \lambda+\varepsilon_{0_u} 
+ \end{array}
+\right|\right.
+\left.
+\begin{array}{c} \varepsilon_1 \\ \varepsilon_{0_1} 
+ \end{array}
+; \begin{array}{c} \Lambda \\ \lambda
+ \end{array}
+\right\rangle = (-1)^{(r)(u)} S(r-u) \nn\\
+&~~\times \left[ (-1)^{|I'|} \prod_{k\in \tilde{I'},k\neq r} 
+\left(
+\frac 
+{\bar{\alpha}_k - \bar{\alpha_0}_u  }
+{\bar{\alpha}_r - \bar{\alpha}_k }
+\right)
+\prod_{k\in I',k \neq u} 
+\left(
+\frac
+{ \bar{\alpha}_r - \bar{\alpha_0}_k - (-1)^{(k)} }
+{\bar{\alpha_0}_u - \bar{\alpha_0}_k - (-1)^{(k)} }
+\right)
+\right]^{1/2}
+,\ \ r\in \tilde{I'},u\in I_1 \label{FinalBarredOdd}
+\end{align}
+where the positive square root is always taken, odd indices are considered greater than even indices, 
+$$
+S(x) = sgn(x),~~S(0)=1.
+$$
+and where we recall
+\begin{align*}
+{\bar{\alpha_0}}_i &= i - 1 -\Lambda_i  , &1\leq i\leq m-1, \\
+{\bar{\alpha_0}}_\mu &= \Lambda_\mu + m + 1 - \mu  ,  &1\leq \mu \leq n-1 , \\ 
+\bar{\alpha}_i  &= i - 1 -{\tilde{\Lambda}}_i , &1\leq i\leq m, \\
+\bar{\alpha}_\mu &= {\tilde{\Lambda}}_\mu + m + 1 - \mu,  &1\leq \mu \leq n .  
+\end{align*}
+
+\subsection{Contravariant dual vector Wigner coefficients}
+
 We now turn to the dual fundamental Wigner coefficients and proceed similarly. 
 Denoting $\bar{e}_i$ to be the Gelfand-Tsetlin (GT) basis states of the (type 2 unitary) dual vector module and ${e^\Lambda_\beta}$ to be the (GT) basis states for the irreducible type 2 unitary module $V(\Lambda)$ of highest weight $\Lambda$ we have 
 \begin{align}
@@ -588,26 +693,19 @@ c_r &= \left| \left\langle\left.
 As in the vector fundamental Wigner case we see that the matrix elements of the projection  $P[r]_{\ m+n}^{m+n}$ determine
 the squares of the dual fundamental Wigner coefficients and depend only on the top two rows of the corresponding Gelfand-Tsetlin basis states.
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-
-\section{Summary}
-The expressions for the WCs of equations (\ref{WCBraKet1}) and (\ref{WCBraKet2}) together with the RWCs of equations (\ref{Schur1}) and (\ref{Schur2}) including their phases \cite{GIW2,GIW3} are then given by
+In addition, the eigenvalues of the invariant ${\rho}_{ru}$ determine the square of $gl(m|n):gl(m|n-1)$ dual vector RWCs \cite{GIW2} since
 \begin{align}
-& \left\langle\left. 
-\begin{array}{c} \Lambda+\varepsilon_r\\ \lambda
- \end{array}
+\rho_{ru} &= \left| \left\langle\left. 
+\begin{array}{c} \Lambda-\varepsilon_r\\ \lambda-\varepsilon_{0_u} \end{array}
 \right|\right.
 \left.
-\begin{array}{c} \varepsilon_1 \\ 0 
- \end{array}
-; \begin{array}{c} \Lambda \\ \lambda
- \end{array}
-\right\rangle = \left[ \prod_{k\in \tilde{I}',k\neq r} \left(\bar{\alpha}_r - \bar{\alpha}_k\right)^{-1}\prod_{k\in
-I'} \left(\bar{\alpha}_r - \bar{\alpha_0}_k - (-1)^{(k)}\right) \right]^{1/2}
-,\ \ r\in \tilde{I}'
+\begin{array}{c} \bar{\varepsilon}_1 \\
+\bar{\varepsilon}_{0_1}  \end{array}  ; \begin{array}{c} \Lambda \\
+\lambda \end{array}
+\right\rangle \nn \right|^2.
 \end{align}
 
+The expressions for the WCs of equation (\ref{WCBraKet2}) together with the RWCs of equation (\ref{Schur2}) including their phases \cite{GIW3} are then given by
 \begin{align}
 &\left\langle\left. 
 \begin{array}{c} \Lambda-\varepsilon_r\\ \lambda
@@ -622,62 +720,6 @@ I'} \left(\bar{\alpha}_r - \bar{\alpha_0}_k - (-1)^{(k)}\right) \right]^{1/2}
 = \left[ \prod_{k\in \tilde{I},k\neq r} \left(\alpha_r - \alpha_k \right)^{-1}\prod_{k\in
 I} \left(\alpha_r - {\alpha_0}_k - (-1)^{(k)}\right) \right]^{1/2}
 ,\ \ r\in \tilde{I} .
-\end{align}
-
-
-
-\begin{align}
-& \left\langle\left. 
-\begin{array}{c} \Lambda+\varepsilon_r\\ \lambda+\varepsilon_{0_u} 
- \end{array}
-\right|\right.
-\left.
-\begin{array}{c} \varepsilon_1 \\ \varepsilon_{0_1} 
- \end{array}
-; \begin{array}{c} \Lambda \\ \lambda
- \end{array}
-\right\rangle = (-1)^{(r)(u)} S(r-u) \nn\\
-&~~\times 
-\left[ 
-\frac{
-(-1)^{|I'|} \prod_{k\in\tilde{I'},k \neq r} \left(\bar{\alpha}_k - \bar{\alpha_0}_u \right)
-\prod_{k\in I'} \left(\bar{\alpha}_r - \bar{\alpha_0}_k - (-1)^{(k)}\right) 
-}
-{
-(\bar{\alpha}_r-\bar{\alpha_0}_u + 1)
-\prod_{k\in \tilde{I'},k\neq r} \left(\bar{\alpha}_r - \bar{\alpha}_k \right)
-\prod_{k\in I',k\neq u} \left(\bar{\alpha_0}_u - \bar{\alpha_0}_k - (-1)^{(k)}\right)
-}
-\right]^{1/2}
-, \ \ r\in \tilde{I'},u\in I   \label{FinalBarredEven}
-\end{align}
-
-
-\begin{align}
-& \left\langle\left. 
-\begin{array}{c} \Lambda+\varepsilon_r\\ \lambda+\varepsilon_{0_u} 
- \end{array}
-\right|\right.
-\left.
-\begin{array}{c} \varepsilon_1 \\ \varepsilon_{0_1} 
- \end{array}
-; \begin{array}{c} \Lambda \\ \lambda
- \end{array}
-\right\rangle = (-1)^{(r)(u)} S(r-u) \nn\\
-&~~\times \left[ (-1)^{|I'|} \prod_{k\in \tilde{I'},k\neq r} 
-\left(
-\frac 
-{\bar{\alpha}_k - \bar{\alpha_0}_u  }
-{\bar{\alpha}_r - \bar{\alpha}_k }
-\right)
-\prod_{k\in I',k \neq u} 
-\left(
-\frac
-{ \bar{\alpha}_r - \bar{\alpha_0}_k - (-1)^{(k)} }
-{\bar{\alpha_0}_u - \bar{\alpha_0}_k - (-1)^{(k)} }
-\right)
-\right]^{1/2}
-,\ \ r\in \tilde{I'},u\in I_1 \label{FinalBarredOdd}
 \end{align}
 
 \begin{align}
@@ -743,20 +785,200 @@ $$
 S(x) = sgn(x),~~S(0)=1.
 $$
 and where we recall
-
 \begin{align*}
-{\bar{\alpha_0}}_i &= i - 1 -\Lambda_i  , &1\leq i\leq m-1, \\
-{\bar{\alpha_0}}_\mu &= \Lambda_\mu + m + 1 - \mu  ,  &1\leq \mu \leq n-1 , \\ 
 {\alpha_0}_i &= \Lambda_i + m - n + 1 - i  , &1\leq i\leq m-1, \\
 {\alpha_0}_\mu &= \mu - \Lambda_\mu -n + 1, &1\leq \mu \leq n-1 , \\
-\bar{\alpha}_i  &= i - 1 -{\tilde{\Lambda}}_i , &1\leq i\leq m, \\
-\bar{\alpha}_\mu &= {\tilde{\Lambda}}_\mu + m + 1 - \mu,  &1\leq \mu \leq n , \\
 \alpha_i &= {\tilde{\Lambda}}_i + m - n - i, &1\leq i\leq m, \\
 \alpha_\mu &= \mu-{\tilde{\Lambda}}_\mu - n, &1\leq \mu \leq n .  
 \end{align*}
-Note that the $gl(m|n)$ roots $\alpha$ and $\bar{\alpha}$ are related to the $gl(m|n-1)$ roots $\alpha_0$ and $\bar{\alpha}_0$ by the substitution $n \rightarrow n - 1$.
 
-{\bf Final remark...}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Symmetry relations}
+
+~~\
+~~\
+\subsection{Covariant dual vector Wigner coefficients}
+~~\
+~~\
+\subsection{Contravariant vector Wigner coefficients}
+~~\
+~~\
+
+
+
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%\section{Summary}
+%The expressions for the WCs of equations (\ref{WCBraKet1}) and (\ref{WCBraKet2}) together with the RWCs of equations (\ref{Schur1}) and (\ref{Schur2}) including their phases \cite{GIW2,GIW3} are then given by
+%\begin{align}
+%& \left\langle\left. 
+%\begin{array}{c} \Lambda+\varepsilon_r\\ \lambda
+% \end{array}
+%\right|\right.
+%\left.
+%\begin{array}{c} \varepsilon_1 \\ 0 
+% \end{array}
+%; \begin{array}{c} \Lambda \\ \lambda
+% \end{array}
+%\right\rangle = \left[ \prod_{k\in \tilde{I}',k\neq r} \left(\bar{\alpha}_r - \bar{\alpha}_k\right)^{-1}\prod_{k\in
+%I'} \left(\bar{\alpha}_r - \bar{\alpha_0}_k - (-1)^{(k)}\right) \right]^{1/2}
+%,\ \ r\in \tilde{I}'
+%\end{align}
+%
+%\begin{align}
+%&\left\langle\left. 
+%\begin{array}{c} \Lambda-\varepsilon_r\\ \lambda
+% \end{array}
+%\right|\right.
+%\left.
+%\begin{array}{c} \bar{\varepsilon}_1 \\ 0 
+% \end{array}
+%; \begin{array}{c} \Lambda \\ \lambda
+% \end{array}
+%\right\rangle
+%= \left[ \prod_{k\in \tilde{I},k\neq r} \left(\alpha_r - \alpha_k \right)^{-1}\prod_{k\in
+%I} \left(\alpha_r - {\alpha_0}_k - (-1)^{(k)}\right) \right]^{1/2}
+%,\ \ r\in \tilde{I} .
+%\end{align}
+%
+%
+%
+%\begin{align}
+%& \left\langle\left. 
+%\begin{array}{c} \Lambda+\varepsilon_r\\ \lambda+\varepsilon_{0_u} 
+% \end{array}
+%\right|\right.
+%\left.
+%\begin{array}{c} \varepsilon_1 \\ \varepsilon_{0_1} 
+% \end{array}
+%; \begin{array}{c} \Lambda \\ \lambda
+% \end{array}
+%\right\rangle = (-1)^{(r)(u)} S(r-u) \nn\\
+%&~~\times 
+%\left[ 
+%\frac{
+%(-1)^{|I'|} \prod_{k\in\tilde{I'},k \neq r} \left(\bar{\alpha}_k - \bar{\alpha_0}_u \right)
+%\prod_{k\in I'} \left(\bar{\alpha}_r - \bar{\alpha_0}_k - (-1)^{(k)}\right) 
+%}
+%{
+%(\bar{\alpha}_r-\bar{\alpha_0}_u + 1)
+%\prod_{k\in \tilde{I'},k\neq r} \left(\bar{\alpha}_r - \bar{\alpha}_k \right)
+%\prod_{k\in I',k\neq u} \left(\bar{\alpha_0}_u - \bar{\alpha_0}_k - (-1)^{(k)}\right)
+%}
+%\right]^{1/2}
+%, \ \ r\in \tilde{I'},u\in I   \label{FinalBarredEven}
+%\end{align}
+%
+%
+%\begin{align}
+%& \left\langle\left. 
+%\begin{array}{c} \Lambda+\varepsilon_r\\ \lambda+\varepsilon_{0_u} 
+% \end{array}
+%\right|\right.
+%\left.
+%\begin{array}{c} \varepsilon_1 \\ \varepsilon_{0_1} 
+% \end{array}
+%; \begin{array}{c} \Lambda \\ \lambda
+% \end{array}
+%\right\rangle = (-1)^{(r)(u)} S(r-u) \nn\\
+%&~~\times \left[ (-1)^{|I'|} \prod_{k\in \tilde{I'},k\neq r} 
+%\left(
+%\frac 
+%{\bar{\alpha}_k - \bar{\alpha_0}_u  }
+%{\bar{\alpha}_r - \bar{\alpha}_k }
+%\right)
+%\prod_{k\in I',k \neq u} 
+%\left(
+%\frac
+%{ \bar{\alpha}_r - \bar{\alpha_0}_k - (-1)^{(k)} }
+%{\bar{\alpha_0}_u - \bar{\alpha_0}_k - (-1)^{(k)} }
+%\right)
+%\right]^{1/2}
+%,\ \ r\in \tilde{I'},u\in I_1 \label{FinalBarredOdd}
+%\end{align}
+%
+%\begin{align}
+%&\left\langle\left. 
+%\begin{array}{c} \Lambda-\varepsilon_r\\ \lambda-\varepsilon_{0_u} 
+% \end{array}
+%\right|\right.
+%\left.
+%\begin{array}{c} \bar{\varepsilon}_1 \\ \bar{\varepsilon}_{0_1} 
+% \end{array}
+%; \begin{array}{c} \Lambda \\ \lambda
+% \end{array}
+%\right\rangle
+%= (-1)^{(r)(u) +(r) + (u)} S(r-u)
+%\nn \\
+%&~~\times
+%\left[
+%\frac{
+%(-1)^{|I|}
+%\prod_{k\in I} \left(\alpha_r - {\alpha_0}_k - (-1)^{(k)}\right)
+%\prod_{k\in\tilde{I},k \neq r} \left(\alpha_k - {\alpha_0}_u \right)
+%}
+%{
+%({\alpha}_r-{\alpha}_u + 1)
+%\prod_{k\in \tilde{I},k\neq r} \left(\alpha_r - \alpha_k \right)
+%\prod_{k\in I,k\neq u} \left({\alpha_0}_u - {\alpha_0}_k - (-1)^{(k)}\right)
+%} 
+%\right]^{1/2}
+%,\ \ r\in \tilde{I},u\in I' \label{FinalUnBarredEven}
+%\end{align}
+%
+%\begin{align}
+%&\left\langle\left. 
+%\begin{array}{c} \Lambda-\varepsilon_r\\ \lambda-\varepsilon_{0_u} 
+% \end{array}
+%\right|\right.
+%\left.
+%\begin{array}{c} \bar{\varepsilon}_1 \\ \bar{\varepsilon}_{0_1} 
+% \end{array}
+%; \begin{array}{c} \Lambda \\ \lambda
+% \end{array}
+%\right\rangle = (-1)^{(r)(u) +(r) + (u)} S(r-u) 
+%\nn\\
+%&~~\times
+%\left[
+% (-1)^{|I|} \prod_{k\in \tilde{I},k\neq r} 
+%\left(
+%\frac 
+%{\alpha_k - {\alpha_0}_u  }
+%{\alpha_r - \alpha_k }
+%\right)
+%\prod_{k\in I,k \neq u} 
+%\left(
+%\frac
+%{ \alpha_r - {\alpha_0}_k - (-1)^{(k)} }
+%{{\alpha_0}_u - {\alpha_0}_k - (-1)^{(k)} }
+%\right)
+%\right]^{1/2}
+%,\ \ r\in \tilde{I},u\in I_1  \label{FinalUnBarredOdd}
+%\end{align}
+%where the positive square root is always taken, odd indices are considered greater than even indices, 
+%$$
+%S(x) = sgn(x),~~S(0)=1.
+%$$
+%and where we recall
+%
+%\begin{align*}
+%{\bar{\alpha_0}}_i &= i - 1 -\Lambda_i  , &1\leq i\leq m-1, \\
+%{\bar{\alpha_0}}_\mu &= \Lambda_\mu + m + 1 - \mu  ,  &1\leq \mu \leq n-1 , \\ 
+%{\alpha_0}_i &= \Lambda_i + m - n + 1 - i  , &1\leq i\leq m-1, \\
+%{\alpha_0}_\mu &= \mu - \Lambda_\mu -n + 1, &1\leq \mu \leq n-1 , \\
+%\bar{\alpha}_i  &= i - 1 -{\tilde{\Lambda}}_i , &1\leq i\leq m, \\
+%\bar{\alpha}_\mu &= {\tilde{\Lambda}}_\mu + m + 1 - \mu,  &1\leq \mu \leq n , \\
+%\alpha_i &= {\tilde{\Lambda}}_i + m - n - i, &1\leq i\leq m, \\
+%\alpha_\mu &= \mu-{\tilde{\Lambda}}_\mu - n, &1\leq \mu \leq n .  
+%\end{align*}
+%Note that the $gl(m|n)$ roots $\alpha$ and $\bar{\alpha}$ are related to the $gl(m|n-1)$ roots $\alpha_0$ and $\bar{\alpha}_0$ by the substitution $n \rightarrow n - 1$.
+%
+%{\bf Final remark...}
 
 
 
