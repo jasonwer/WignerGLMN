@@ -796,6 +796,93 @@ and where we recall
 
 \section{Symmetry relations}
 
+We continue to use the notation defined in the previous section. Consider a $gl(m|n)$ vector operator $\psi^i$. Acting on a type 1 unitary irreducible module $V(\Lambda)$, $\psi^i$ determines an intertwining operator 
+$$
+\psi: V(e_1) \otimes V(\Lambda) \rightarrow V, ~~ \psi(e_i \otimes \nu) = \psi^i \nu, ~~\forall \nu \in V(\Lambda)
+$$
+where $V$ is the direct sum of the irreducible modules
+$$
+V = \oplus V'(\Lambda + \epsilon_r).
+$$
+From Schur's lemma we have
+\begin{align*}
+\left\langle e_\beta^{\Lambda  + \epsilon_r} | \psi^i | e^{\Lambda}_\alpha \right\rangle 
+= \left \langle \Lambda + \epsilon_r || \psi || \Lambda \right \rangle
+\left\langle e^{\Lambda+\epsilon_r}_\beta | e_i \otimes e^{\Lambda}_\alpha \right\rangle
+\end{align*}
+which is the Wigner-Eckart theorem for vector operators. Similarly, for a dual vector operator $\phi_i$ defined by
+$$
+\phi_i = (\psi^j)^\dagger
+$$
+acting on a type 2 unitary irreducible module $V(\Lambda)$  we have
+\begin{align*}
+\left\langle e_\beta^{\Lambda  - \epsilon_r} | \phi^i | e^{\Lambda}_\alpha \right\rangle 
+= \left \langle \Lambda - \epsilon_r || \phi || \Lambda \right \rangle
+\left\langle e^{\Lambda-\epsilon_r}_\beta | \bar{e}_i \otimes e^{\Lambda}_\alpha \right\rangle
+\end{align*}
+which implies
+~~
+\begin{align*}
+&\left \langle \Lambda + \epsilon_r || \psi || \Lambda \right \rangle
+\left\langle e^{\Lambda+\epsilon_r}_\beta | e_i \otimes e^{\Lambda}_\alpha \right\rangle \\
+&~~= \left\langle e_\beta^{\Lambda  + \epsilon_r} | \psi^i | e^{\Lambda}_\alpha \right\rangle \\
+&~~= \left\langle e_\alpha^{\Lambda} | \phi^i | e^{\Lambda + \epsilon_r}_\beta \right\rangle^*\\
+&~~=\left \langle \Lambda || \phi || \Lambda + \epsilon_r \right \rangle^*
+\left\langle e^{\Lambda}_\alpha | \bar{e}_i \otimes e^{\Lambda+\epsilon_r}_\beta \right\rangle.
+\end{align*}
+This serves as a definition of the  covariant dual vector Wigner coefficients $\left\langle e^{\Lambda}_\alpha | \bar{e}_i \otimes e^{\Lambda+\epsilon_r}_\beta \right\rangle$ since we have the symmetry condition
+$$
+\left\langle e^{\Lambda+\epsilon_r}_\beta | e_i \otimes e^{\Lambda}_\alpha \right\rangle
+= \eta \left\langle e^{\Lambda}_\alpha | \bar{e}_i \otimes e^{\Lambda+\epsilon_r}_\beta \right\rangle^*
+$$
+where $\eta$ is a constant that is independent of $i, \alpha$ and $\beta$ and is given by
+$$
+\left \langle \Lambda + \epsilon_r || \psi || \Lambda \right \rangle \eta = \left \langle \Lambda || \phi || \Lambda + \epsilon_r \right \rangle^*.
+$$
+We therefore determine $\eta$ from the expression
+\begin{align}
+\eta = \frac {\bar{\delta}_r [\Lambda + \epsilon_r]} {\delta_r [\Lambda] }
+\label{eta_ratio}
+\end{align}
+where $\bar{\delta}_r [\Lambda + \epsilon_r]$ indicates that a shift is applied to the $\bar{\delta}_r$ expression. To aid this calculation we use the index set free version of $\bar{\delta}_u$ and $\delta_u$  given in \cite{GIW2,GIW3}
+\begin{align}
+\delta_u [\Lambda] &= \prod_{k = 1, \neq u}^m \left(\frac{\alpha_k-\alpha_u}{\alpha_u - \beta_k - 1}  \right)
+\prod_{k=m+1,\neq u}^{m+n}(\alpha_u-\alpha_k + 1 )^{-1}
+\prod_{k=m+1}^{m+n+1}(\beta_k-\alpha_u ),\ \ u \in I'.
+\label{delta_dontshift}
+\end{align}
+\begin{align}
+\bar{\delta}_u [\Lambda] &= \prod_{k = 1}^m \left(\frac{\alpha_k-\alpha_u + 1 - (-1)^{(u)}}{\beta_k-\alpha_u + 1 - (-1)^{(u)}}  \right)
+\prod_{k=m+1}^{m+n+1}(\beta_k-\alpha_u-(-1)^{(u)})
+\prod_{k=m+1,\neq u}^{m+n}(\alpha_u-\alpha_k+(-1)^{(u)})^{-1},\ \ u \in I.
+\label{deltabar_unshifted}
+\end{align}
+From the definitions of the roots $\alpha_i$ and $\alpha_\mu$ we see that 
+the shift in the weight label $\Lambda_u \rightarrow \Lambda_u - 1$ is equivalent to a shift in 
+the roots $\alpha_u \rightarrow \alpha_u - (-1)^{(u)}$. Applying this shift to equation (\ref{deltabar_unshifted}) we have
+\begin{align}
+\bar{\delta}_u [\Lambda - \epsilon_r] &= \prod_{k = 1}^m \left(\frac{\alpha_k-\alpha_u + 1 }{\beta_k-\alpha_u + 1 }  \right)
+\prod_{k=m+1}^{m+n+1}(\beta_k-\alpha_u)
+\prod_{k=m+1,\neq u}^{m+n}(\alpha_u-\alpha_k)^{-1},\ \ u \in I.
+\label{deltabar_shifted}
+\end{align}
+Substituting equations (\ref{deltabar_shifted}) and (\ref{delta_dontshift}) into equation (\ref{eta_ratio}) gives
+\begin{align}
+\eta &= \prod_{k=1}^m \frac {\alpha_k - \alpha_u + 1}{\alpha_k - \alpha_u}
+  \prod_{k=m+1}^{m+n} \frac {\alpha_k - \alpha_u - 1}{\alpha_k - \alpha_u} \nn\\
+&= \prod^{m+n}_{k=1} 
+\left( 
+\frac
+{\alpha_a - \alpha_k - (-1)^{(k)}}
+{\alpha_a - \alpha_k}
+\right) \\
+&= \frac {D(\Lambda - \epsilon_r)} { D(\Lambda) } \nn,
+\end{align}
+where $D(\lambda)$ is the dimension of the even $gl(m) \oplus gl(n)$ subalgebra of the $gl(m|n)$ module of highest weight $\lambda$.
+
+
+
+
 ~~\
 ~~\
 \subsection{Covariant dual vector Wigner coefficients}
@@ -1039,7 +1126,7 @@ and where we recall
 %
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %
-\section*{Acknowledgments}
+\section*{Acknowledgements}
 %
 This work was supported by the Australian Research Council through Discovery Project
 DP140101492. 
@@ -1051,65 +1138,6 @@ DP140101492.
 %
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %
-\newpage
-\section*{Appendix A: Symmetry relations}
-$$
-\psi: V_0 \otimes V(\Lambda) \rightarrow V, ~~ \psi(e_i \otimes \nu) = \psi^i \nu, ~~\forall \nu \in V(\Lambda)
-$$
-~~\\
-$$
-V = \oplus V'(\Lambda + \epsilon_r)
-$$
-~~
-\begin{align*}
-\left\langle e_\beta^{\Lambda  + \epsilon_r} | \psi^i | e^{\Lambda}_\alpha \right\rangle 
-= \left \langle \Lambda + \epsilon_r || \psi || \Lambda \right \rangle
-\left\langle e^{\Lambda+\epsilon_r}_\beta | e_i \otimes e^{\Lambda}_\alpha \right\rangle
-\end{align*}
-~~
-$$
-\phi_i = (\psi^j)^\dagger
-$$
-~~
-\begin{align*}
-\left\langle e_\beta^{\Lambda  - \epsilon_r} | \phi^i | e^{\Lambda}_\alpha \right\rangle 
-= \left \langle \Lambda - \epsilon_r || \phi || \Lambda \right \rangle
-\left\langle e^{\Lambda-\epsilon_r}_\beta | \bar{e}_i \otimes e^{\Lambda}_\alpha \right\rangle
-\end{align*}
-which implies
-~~
-\begin{align*}
-&\left \langle \Lambda + \epsilon_r || \psi || \Lambda \right \rangle
-\left\langle e^{\Lambda+\epsilon_r}_\beta | e_i \otimes e^{\Lambda}_\alpha \right\rangle \\
-&~~= \left\langle e_\beta^{\Lambda  + \epsilon_r} | \psi^i | e^{\Lambda}_\alpha \right\rangle \\
-&~~= \left\langle e_\alpha^{\Lambda} | \phi^i | e^{\Lambda + \epsilon_r}_\beta \right\rangle^*\\
-&~~=\left \langle \Lambda || \phi || \Lambda + \epsilon_r \right \rangle^*
-\left\langle e^{\Lambda}_\alpha | \bar{e}_i \otimes e^{\Lambda+\epsilon_r}_\beta \right\rangle.
-\end{align*}
-~~
-We therefore have the symmetry condition
-$$
-\left\langle e^{\Lambda+\epsilon_r}_\beta | e_i \otimes e^{\Lambda}_\alpha \right\rangle
-= \eta \left\langle e^{\Lambda}_\alpha | \bar{e}_i \otimes e^{\Lambda+\epsilon_r}_\beta \right\rangle^*
-$$
-where $\eta$ is a constant that is independent of $i, \alpha$ and $\beta$ and is given by
-$$
-\left \langle \Lambda + \epsilon_r || \psi || \Lambda \right \rangle \eta = \left \langle \Lambda || \phi || \Lambda + \epsilon_r \right \rangle^*.
-$$
-To determine $\eta$ we ...
-~~\\
-~~\\
-$$
-\eta = \prod^{m+n}_{k=1} 
-\left( 
-\frac
-{\alpha_a - \alpha_k - (-1)^{(k)}}
-{\alpha_a - \alpha_k}
-\right)
-$$
-
-
-
 
 \newpage
 \begin{thebibliography}{10}
