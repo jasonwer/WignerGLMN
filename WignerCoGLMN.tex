@@ -404,19 +404,17 @@ of $V({\varepsilon_1})\otimes V(\Lambda)$ or $V({\varepsilon_1})^*\otimes V(\Lam
 set of $\Lambda$ for which this happens, however, is closed in the Zariski topology
 \cite{Hump1972} on $H^*$. It follows that the roots of the characteristic identity are distinct on an open and hence dense subset of
 $H^*$. Hence without loss of generality, we will make the assumption that the roots are distinct. Furthermore, the invariants derived in this paper are given by rational
-polynomial functions which are continuous in the Zariski topology. 
+polynomial functions which are continuous in the Zariski topology. We may therefore extend our results to the case $\alpha_r = \alpha_k$ or $\bar{\alpha}_r = \bar{\alpha}_k$ by continuity arguments.
 
 {\bf Remark 2:} 
-When applying the projection operators we must take care to distinguish between type 1 unitary and type 2 unitary modules. These classes of modules are defined as follows. Consider the positive-definite, invariant, sesquilinear form defined on an irreducible highest weight module $V(\lambda)$ of $gl(m|n)$ 
+When applying the projection operators we must take care to distinguish between type 1 unitary and type 2 unitary modules. On an irreducible finite dimensional $gl(m|n)$ module $V(\Lambda)$ there exists a non-degenerate sesquilinear form 
+$\langle ~|~ \rangle_\theta$ satisfying 
 $$
-\langle a_{pq} | w \rangle = (-1)^{\epsilon [(p) + (q)]} \langle v | a_{qp} w \rangle , \epsilon  \in \{0,1\}.
-$$
-When $\epsilon = 0$ we call $V(\Lambda)$ a type 1 unitary irrep while for $\epsilon = 1$ we call $V(\Lambda)$ a type 2 unitary irrep. The induced form on a tensor product space $V(\Lambda) \otimes V(\mu)$ is non-degenerate only when restricted to a direct summand of the tensor product space and only when $ V(\Lambda)$ and $V(\mu)$ are of the same type. We then define Wigner coefficients with respect to this form. 
+\langle E_{pq} v | w \rangle = (-1)^{(\theta - 1)[(p) + (q)]} \langle v | E_{qp} w \rangle , ~\theta  \in \{1,2\},
+$$ 
+that is unique up to scalar multiples. The module $V(\Lambda)$ is called type $\theta$ unitary if $\langle ~|~ \rangle_\theta$ is positive definite on $V(\Lambda)$ and the corresponding representation is also called type $\theta$ unitary. The induced form on the tensor product space $V(\Lambda) \otimes V(\mu)$ induces a non-degenerate inner product on the tensor product module in a natural way. We may define Wigner coefficients with respect to this form, however in the non-.... case the induced form is still non degenerate and we may also define Wigner coefficients in the usual way.
 
-{\bf Remark 3:}
-The algebraic symmetry of the invariants $\rho$ and $\bar{\rho}$ in the case of Lie algebras is reminicent of the well known symmetry of Wigner coefficients. In our superalgebra case, complexities arise... 
-
-Due to these considerations we now consider the type 1 unitary and type 2 unitary cases of Wigner coefficients seperately.
+Due to these considerations we now consider the type 1 unitary and type 2 unitary cases of Wigner coefficients separately.
 
 \subsection{Covariant vector Wigner coefficients}
 
@@ -441,11 +439,10 @@ From Schur's lemma we observe that the fundamental WCs factorize as follows
 e_i\otimes \begin{array}{c} \Lambda \\ \lambda \\
 {[\Lambda_0]} \end{array}
 \right\rangle &= 
-\left\langle\left. 
+\left\langle \left.
 \begin{array}{c} \Lambda+\varepsilon_k\\ \lambda+\varepsilon_{0_r} 
  \end{array}
-\right|\right.
-\left.
+\right\rVert
 \begin{array}{c} \varepsilon_1 \\ \varepsilon_{0_1} 
  \end{array}
 ; \begin{array}{c} \Lambda \\ \lambda
@@ -460,6 +457,7 @@ e_i\otimes \begin{array}{c} \lambda \\
 \right\rangle,\label{Schur1}\\ 
 1 < i < m+n, \nn
 \end{align}
+
 where $1 < k \leq m+n$,~$1 < r \leq m+n-1$, 
 $\Lambda$ denotes the type 1 unitary highest weight of $gl(m|n)$, $\lambda$ denotes the highest weight of $gl(m|n-1)$ and $[\Lambda_0]$ denotes the GT pattern of the $gl(m|n-2)$ subalgebra. In addition, the first term on the rhs of equation (\ref{Schur1}) is a reduced Wigner coeficient (RWC) which is independent of the highest
 weight labels of $[\Lambda_0]$ and $[\Lambda'_0]$.
@@ -472,10 +470,10 @@ Setting $i=m+n$ gives
 \left.
 e_{m+n} \otimes \begin{array}{c} \Lambda \\ \lambda \\
 {[\Lambda_0]} \end{array}
-\right\rangle = \delta_{[\Lambda'_0][\Lambda]}
- \left\langle\left. 
+\right\rangle = \delta_{[\Lambda'_0][\Lambda_0]}
+ \left\langle 
 \begin{array}{c} \Lambda+\varepsilon_k\\ \lambda \end{array}
-\right|\right.
+\right\rVert
 \left.
 \begin{array}{c} 
 \varepsilon_1 \\ \dot{0}
@@ -485,16 +483,16 @@ e_{m+n} \otimes \begin{array}{c} \Lambda \\ \lambda \\
 \lambda \end{array}
 \right\rangle  , \label{WCBraKet1}
 \end{align}
-where the RWC on the rhs reduces to the WC in this case which are independent of $[\Lambda_0]$ and $[\Lambda'_0]$ as expected. 
+where $\delta$ here denotes the Kronecker delta and the RWC on the rhs reduces to the WC in this case which is independent of $[\Lambda_0]$ and $[\Lambda'_0]$ as expected. 
 The WC in equation (\ref{WCBraKet1}) is given by the eigenvalues of the invariant
 $$ 
 \bar{c}_r = \bar{P}[r]_{m+n}^{\ m+n}
 $$
 since from equation (\ref{BarPij}) we have
 \begin{align}
-\bar{c}_r  &= \left| \left\langle\left. 
+\bar{c}_r  &= \left| \left\langle 
 \begin{array}{c} \Lambda+\varepsilon_r\\ \lambda \end{array}
-\right|\right.
+\right\rVert
 \left.
 \begin{array}{c} \varepsilon_1 \\
 \dot{0} \end{array} 
@@ -509,9 +507,9 @@ the squares of the fundamental Wigner coefficients and depend only on the top tw
 
 Furthermore, the eigenvalues of the invariant $\bar{\rho}_{ru}$ determine the square of $gl(m|n):gl(m|n-1)$ covariant vector RWCs \cite{GIW2} since 
 \begin{align}
-\bar{\rho}_{ru}  &= \left| \left\langle\left. 
+\bar{\rho}_{ru}  &= \left| \left\langle
 \begin{array}{c} \Lambda+\varepsilon_r\\ \lambda+\varepsilon_{0_u} \end{array}
-\right|\right.
+\right\rVert
 \left.
 \begin{array}{c} \varepsilon_1 \\
 \varepsilon_{0_1} \end{array} 
@@ -523,10 +521,10 @@ Furthermore, the eigenvalues of the invariant $\bar{\rho}_{ru}$ determine the sq
 
 The expressions for the WCs of equation (\ref{WCBraKet1}) together with the RWCs of equation (\ref{Schur1}) including their phases \cite{GIW2} are then given by
 \begin{align}
-& \left\langle\left. 
+& \left\langle 
 \begin{array}{c} \Lambda+\varepsilon_r\\ \lambda
  \end{array}
-\right|\right.
+\right\rVert
 \left.
 \begin{array}{c} \varepsilon_1 \\ 0 
  \end{array}
@@ -538,10 +536,10 @@ I'} \left(\bar{\alpha}_r - \bar{\alpha_0}_k - (-1)^{(k)}\right) \right]^{1/2}
 \end{align}
 
 \begin{align}
-& \left\langle\left. 
+& \left\langle
 \begin{array}{c} \Lambda+\varepsilon_r\\ \lambda+\varepsilon_{0_u} 
  \end{array}
-\right|\right.
+\right\rVert
 \left.
 \begin{array}{c} \varepsilon_1 \\ \varepsilon_{0_1} 
  \end{array}
@@ -565,10 +563,10 @@ I'} \left(\bar{\alpha}_r - \bar{\alpha_0}_k - (-1)^{(k)}\right) \right]^{1/2}
 
 
 \begin{align}
-& \left\langle\left. 
+& \left\langle
 \begin{array}{c} \Lambda+\varepsilon_r\\ \lambda+\varepsilon_{0_u} 
  \end{array}
-\right|\right.
+\right\rVert
 \left.
 \begin{array}{c} \varepsilon_1 \\ \varepsilon_{0_1} 
  \end{array}
@@ -629,10 +627,10 @@ Again, from Schur's lemma we observe that the dual fundamental WCs factorize as 
 \bar{e}_i\otimes \begin{array}{c} \Lambda \\ \lambda \\
 {[\Lambda_0]} \end{array}
 \right\rangle &= 
-\left\langle\left. 
+\left\langle 
 \begin{array}{c} \Lambda-\varepsilon_k\\ \lambda-\varepsilon_{0_r} 
  \end{array}
-\right|\right.
+\right\rVert
 \left.
 \begin{array}{c} \bar{\varepsilon}_1 \\ \bar{\varepsilon}_{0_1} 
  \end{array}
@@ -662,9 +660,9 @@ Setting $i=m+n$ gives
 \bar{e}_{m+n} \otimes \begin{array}{c} \Lambda \\ \lambda \\
 {[\Lambda_0]} \end{array}
 \right\rangle = \delta_{[\Lambda'_0][\Lambda]}
- \left\langle\left. 
+ \left\langle 
 \begin{array}{c} \Lambda-\varepsilon_k\\ \lambda \end{array}
-\right|\right.
+\right\rVert
 \left.
 \begin{array}{c} 
 \bar{\varepsilon}_1 \\ \dot{0}
@@ -681,9 +679,9 @@ c_r = P[r]_{\ m+n}^{m+n}
 $$
 since from equation (\ref{Pij}) we have
 \begin{align}
-c_r &= \left| \left\langle\left. 
+c_r &= \left| \left\langle
 \begin{array}{c} \Lambda-\varepsilon_r\\ \lambda \end{array}
-\right|\right.
+\right\rVert
 \left.
 \begin{array}{c} \bar{\varepsilon}_1 \\
 \dot{0} \end{array}  ; \begin{array}{c} \Lambda \\
@@ -695,9 +693,9 @@ the squares of the dual fundamental Wigner coefficients and depend only on the t
 
 In addition, the eigenvalues of the invariant ${\rho}_{ru}$ determine the square of $gl(m|n):gl(m|n-1)$ dual vector RWCs \cite{GIW2} since
 \begin{align}
-\rho_{ru} &= \left| \left\langle\left. 
+\rho_{ru} &= \left| \left\langle 
 \begin{array}{c} \Lambda-\varepsilon_r\\ \lambda-\varepsilon_{0_u} \end{array}
-\right|\right.
+\right\rVert
 \left.
 \begin{array}{c} \bar{\varepsilon}_1 \\
 \bar{\varepsilon}_{0_1}  \end{array}  ; \begin{array}{c} \Lambda \\
@@ -707,10 +705,10 @@ In addition, the eigenvalues of the invariant ${\rho}_{ru}$ determine the square
 
 The expressions for the WCs of equation (\ref{WCBraKet2}) together with the RWCs of equation (\ref{Schur2}) including their phases \cite{GIW3} are then given by
 \begin{align}
-&\left\langle\left. 
+&\left\langle 
 \begin{array}{c} \Lambda-\varepsilon_r\\ \lambda
  \end{array}
-\right|\right.
+\right\rVert
 \left.
 \begin{array}{c} \bar{\varepsilon}_1 \\ 0 
  \end{array}
@@ -723,10 +721,10 @@ I} \left(\alpha_r - {\alpha_0}_k - (-1)^{(k)}\right) \right]^{1/2}
 \end{align}
 
 \begin{align}
-&\left\langle\left. 
+&\left\langle
 \begin{array}{c} \Lambda-\varepsilon_r\\ \lambda-\varepsilon_{0_u} 
  \end{array}
-\right|\right.
+\right\rVert
 \left.
 \begin{array}{c} \bar{\varepsilon}_1 \\ \bar{\varepsilon}_{0_1} 
  \end{array}
@@ -752,10 +750,10 @@ I} \left(\alpha_r - {\alpha_0}_k - (-1)^{(k)}\right) \right]^{1/2}
 \end{align}
 
 \begin{align}
-&\left\langle\left. 
+&\left\langle 
 \begin{array}{c} \Lambda-\varepsilon_r\\ \lambda-\varepsilon_{0_u} 
  \end{array}
-\right|\right.
+\right\rVert
 \left.
 \begin{array}{c} \bar{\varepsilon}_1 \\ \bar{\varepsilon}_{0_1} 
  \end{array}
@@ -796,9 +794,13 @@ and where we recall
 
 \section{Symmetry relations}
 
-We continue to use the notation defined in the previous section. Consider a $gl(m|n)$ vector operator $\psi^i$. Acting on a type 1 unitary irreducible module $V(\Lambda)$, $\psi^i$ determines an intertwining operator 
+%We continue to use the notation defined in the previous section. 
+We assume that the Wigner-Eckart theorem holds on a type 1 unitary tensor product space for both vector and dual vector operators.
+
+\subsection{Relation between vector and dual (contragredient) vector Wigner operators}
+Consider a $gl(m|n)$ vector operator $\psi^i$. Acting on a type 1 unitary irreducible module $V(\Lambda)$, $\psi^i$ determines an intertwining operator 
 $$
-\psi: V(e_1) \otimes V(\Lambda) \rightarrow V, ~~ \psi(e_i \otimes \nu) = \psi^i \nu, ~~\forall \nu \in V(\Lambda)
+\psi: V(\epsilon_1) \otimes V(\Lambda) \rightarrow V, ~~ \psi(e_i \otimes v) = \psi^i v, ~~\forall v \in V(\Lambda)
 $$
 where $V$ is the direct sum of the irreducible modules
 $$
@@ -810,13 +812,13 @@ From Schur's lemma we have
 = \left \langle \Lambda + \epsilon_r || \psi || \Lambda \right \rangle
 \left\langle e^{\Lambda+\epsilon_r}_\beta | e_i \otimes e^{\Lambda}_\alpha \right\rangle
 \end{align*}
-which is the Wigner-Eckart theorem for vector operators. Similarly, for a dual vector operator $\phi_i$ defined by
+which is the Wigner-Eckart theorem for vector operators on type 1 unitary modules. Similarly, for a dual vector operator $\phi_i$ defined by
 $$
-\phi_i = (\psi^j)^\dagger
+\phi_i = (\psi^i)^\dagger
 $$
-acting on a type 2 unitary irreducible module $V(\Lambda)$  we have
+acting on a type 1 unitary irreducible module $V(\Lambda)$  we have
 \begin{align*}
-\left\langle e_\beta^{\Lambda  - \epsilon_r} | \phi^i | e^{\Lambda}_\alpha \right\rangle 
+\left\langle e_\beta^{\Lambda  - \epsilon_r} | \phi_i | e^{\Lambda}_\alpha \right\rangle 
 = \left \langle \Lambda - \epsilon_r || \phi || \Lambda \right \rangle
 \left\langle e^{\Lambda-\epsilon_r}_\beta | \bar{e}_i \otimes e^{\Lambda}_\alpha \right\rangle
 \end{align*}
@@ -826,7 +828,7 @@ which implies
 &\left \langle \Lambda + \epsilon_r || \psi || \Lambda \right \rangle
 \left\langle e^{\Lambda+\epsilon_r}_\beta | e_i \otimes e^{\Lambda}_\alpha \right\rangle \\
 &~~= \left\langle e_\beta^{\Lambda  + \epsilon_r} | \psi^i | e^{\Lambda}_\alpha \right\rangle \\
-&~~= \left\langle e_\alpha^{\Lambda} | \phi^i | e^{\Lambda + \epsilon_r}_\beta \right\rangle^*\\
+&~~= \left\langle e_\alpha^{\Lambda} | \phi_i | e^{\Lambda + \epsilon_r}_\beta \right\rangle^*\\
 &~~=\left \langle \Lambda || \phi || \Lambda + \epsilon_r \right \rangle^*
 \left\langle e^{\Lambda}_\alpha | \bar{e}_i \otimes e^{\Lambda+\epsilon_r}_\beta \right\rangle.
 \end{align*}
@@ -861,7 +863,7 @@ From the definitions of the roots $\alpha_i$ and $\alpha_\mu$ we see that
 the shift in the weight label $\Lambda_u \rightarrow \Lambda_u - 1$ is equivalent to a shift in 
 the roots $\alpha_u \rightarrow \alpha_u - (-1)^{(u)}$. Applying this shift to equation (\ref{deltabar_unshifted}) we have
 \begin{align}
-\bar{\delta}_u [\Lambda - \epsilon_r] &= \prod_{k = 1}^m \left(\frac{\alpha_k-\alpha_u + 1 }{\beta_k-\alpha_u + 1 }  \right)
+\bar{\delta}_u [\Lambda - \epsilon_u] &= \prod_{k = 1}^m \left(\frac{\alpha_k-\alpha_u + 1 }{\beta_k-\alpha_u + 1 }  \right)
 \prod_{k=m+1}^{m+n+1}(\beta_k-\alpha_u)
 \prod_{k=m+1,\neq u}^{m+n}(\alpha_u-\alpha_k)^{-1},\ \ u \in I.
 \label{deltabar_shifted}
@@ -873,25 +875,16 @@ Substituting equations (\ref{deltabar_shifted}) and (\ref{delta_dontshift}) into
 &= \prod^{m+n}_{k=1} 
 \left( 
 \frac
-{\alpha_a - \alpha_k - (-1)^{(k)}}
-{\alpha_a - \alpha_k}
+{\alpha_u - \alpha_k - (-1)^{(k)}}
+{\alpha_u - \alpha_k}
 \right) \\
-&= \frac {D(\Lambda - \epsilon_r)} { D(\Lambda) } \nn,
+&= \frac {D(\Lambda - \epsilon_u)} { D(\Lambda) } \nn,
 \end{align}
-where $D(\lambda)$ is the dimension of the even $gl(m) \oplus gl(n)$ subalgebra of the $gl(m|n)$ module of highest weight $\lambda$.
+where $D(\lambda)$ is the dimension of the even $gl(m) \oplus gl(n)$ subalgebra of the $gl(m|n)$ module of highest weight $\Lambda$.
 
-
-
-
-~~\
-~~\
-\subsection{Covariant dual vector Wigner coefficients}
-~~\
-~~\
-\subsection{Contravariant vector Wigner coefficients}
-~~\
-~~\
-
+\subsection{Extensions}
+It is important to note that if $V \otimes V(\lambda)$ (resp. $V^* \otimes V(\lambda)$)
+is completely reducible then the Wigner-Eckart theorem also holds and we can define Wigner coefficients which agree with the usual definition. However, when such tensor products are not completely reducible then indecomposable occur and the Wigner-Eckart theorem no longer applies...
 
 
 
